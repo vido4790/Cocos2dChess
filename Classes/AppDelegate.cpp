@@ -44,22 +44,10 @@ AppDelegate::~AppDelegate()
 #pragma mark Setters/Getters
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Director *                  
-AppDelegate::_getDirector()
-{
-    return Director::getInstance();
-}
-
-GLView *
-AppDelegate::_getGLView()
-{
-    return Director::getInstance()->getOpenGLView();
-}
-
 Scene *                  
 AppDelegate::_getRunningScene()
 {
-    return _getDirector()->getRunningScene();
+    return getDirector()->getRunningScene();
 }
 
 
@@ -71,7 +59,7 @@ AppDelegate::_getRunningScene()
 void
 AppDelegate::setNewScene(Scene * inScene)
 {
-    auto dir        = _getDirector();
+    auto dir        = getDirector();
 
     if (_getRunningScene() == nullptr)
     {
@@ -92,8 +80,8 @@ AppDelegate::setNewScene(Scene * inScene)
 bool
 AppDelegate::applicationDidFinishLaunching()
 {
-    auto dir        = _getDirector();
-    auto glView     = _getGLView();
+    auto dir        = getDirector();
+    auto glView     = getGLView();
 
     if (glView != nullptr)
     {
@@ -102,8 +90,7 @@ AppDelegate::applicationDidFinishLaunching()
 
     cocos2d::log("Launching app");
     
-    glView = GLViewImpl::create("Chess");
-    glView->setFrameSize(1280, 960);
+    glView = GLViewImpl::createWithRect("Chess", Rect(0, 0, 1280, 720));
     dir->setOpenGLView(glView);
 
     _stateMachine->init(new ChessAppInitialState());

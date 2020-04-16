@@ -43,9 +43,7 @@ AppStateMachine::receiveEvent(AppEvent * inEvent)
 {
     cocos2d::log("AppStateMachine::receiveEvent(%d)", inEvent->getID());
     
-    cocos2d::log("%p", _currState);
-    
-	AppState * newState = _currState->_react(inEvent);
+    AppState * newState = _currState->_react(inEvent);
     
 	if (newState != _currState)
 	{

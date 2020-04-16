@@ -67,12 +67,16 @@ public:
 
         @returns        Singleton instance of this class
      */
-    static AppDelegate *   getInstance()
+    static AppDelegate *        getInstance()
     { dynamic_cast<AppDelegate *>(Application::getInstance()); }
 
+    static cocos2d::Director *  getDirector()
+    { return cocos2d::Director::getInstance(); }
+    
+    static cocos2d::GLView *    getGLView()
+    { return getDirector()->getOpenGLView(); }
+    
 private:
-    cocos2d::Director *         _getDirector();
-    cocos2d::GLView *           _getGLView();
     cocos2d::Scene *            _getRunningScene();
 
 private:

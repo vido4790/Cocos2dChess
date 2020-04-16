@@ -50,7 +50,7 @@ WelcomeScene::init()
 	sprite->setPosition(getBoundingBox().getMidX(), getBoundingBox().getMidY());
 	sprite->setOpacity(0);
 	addChild(sprite, 0);
-
+    
     cocos2d::Vector<cocos2d::FiniteTimeAction*> actions;
     actions.pushBack(cocos2d::DelayTime::create(1));
     actions.pushBack(cocos2d::FadeTo::create(1, 255));
