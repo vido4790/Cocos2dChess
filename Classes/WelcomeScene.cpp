@@ -45,7 +45,7 @@ WelcomeScene::init()
 	{
 		return false;
 	}
-
+    
 	auto sprite = cocos2d::Sprite::create(kLogoImage);
 	sprite->setPosition(getBoundingBox().getMidX(), getBoundingBox().getMidY());
 	sprite->setOpacity(0);

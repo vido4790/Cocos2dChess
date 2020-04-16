@@ -48,6 +48,24 @@ namespace render
 		cocos2d::Sprite *			_sprite;
 	};
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    #pragma mark -
+    #pragma mark ChessObjectWithColor
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    class ChessObjectWithColor : public ChessObject
+    {
+    public:
+        ChessObjectWithColor() = default;
+        ChessObjectWithColor(const cocos2d::Color3B & inColor,
+                             const cocos2d::Rect &    inRect);
+        
+    protected:
+        void                        _init(const cocos2d::Color3B & inColor,
+                                          const cocos2d::Rect &    inRect);
+    };
+    
     
     ////////////////////////////////////////////////////////////////////////////////////////////////
     #pragma mark -
@@ -66,49 +84,73 @@ namespace render
                                           const cocos2d::Rect &  inRect);
     };
     
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-    #pragma mark -
-    #pragma mark ChessTile
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    class ChessTile : public ChessObject
-	{
-	public:
-		ChessTile(attributes::ChessColor inColor,
-                  const cocos2d::Rect &  inRect);
-	};
-    
     
     ////////////////////////////////////////////////////////////////////////////////////////////////
     #pragma mark -
     #pragma mark ChessPieceObject
     ////////////////////////////////////////////////////////////////////////////////////////////////
     
+    class ChessTile;
+    
     class ChessPieceObject : public ChessObjectWithImage
-	{
-		using ImageMap = std::unordered_map<attributes::ChessPieceName, const char *,
-                                            attributes::EnumClassHash>;
-
-	public:
+    {
+        using ImageMap = std::unordered_map<attributes::ChessPieceName, const char *,
+        attributes::EnumClassHash>;
+        
+    public:
         ChessPieceObject(attributes::ChessColor     inColor,
                          attributes::ChessPieceName inPiece,
-                         const ChessTile &          inTile);
+                         const ChessTile *          inTile);
         
-		ChessPieceObject(attributes::ChessColor     inColor,
+        ChessPieceObject(attributes::ChessColor     inColor,
                          attributes::ChessPieceName inPiece,
                          const cocos2d::Rect &      inRect);
-
+        
+        attributes::ChessPieceName  getName() const { return _name; }
+        attributes::ChessColor      getColor() const { return _color; }
+        
         void                        move(const ChessTile * inTile);
-
-	private:
+        
+    private:
         void                        _init(attributes::ChessColor     inColor,
                                           attributes::ChessPieceName inPiece,
                                           const cocos2d::Rect &      inRect);
         
-		attributes::ChessPieceName 	_name;
-
-		const static ImageMap       _sBlackImageMap;
+        attributes::ChessPieceName  _name;
+        attributes::ChessColor      _color;
+        
+        const static ImageMap       _sBlackImageMap;
         const static ImageMap       _sWhiteImageMap;
+    };
+    
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    #pragma mark -
+    #pragma mark ChessTile
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    class ChessTile : public ChessObjectWithColor
+	{
+	public:
+		ChessTile(attributes::ChessColor inColor,
+                  const cocos2d::Rect &  inRect);
+        virtual ~ChessTile();
+        
+        ChessPieceObject *          getPiece() const { return _piece; }
+        
+        void                        movePiece(ChessPieceObject * inNewPiece);
+        ChessPieceObject *          removePiece();
+        ChessPieceObject *          replacePiece(ChessPieceObject * inNewPiece);
+        
+        ChessPieceObject *          createChessPieceOnTile(attributes::ChessColor     inColor,
+                                                           attributes::ChessPieceName inPiece);
+        
+        static const cocos2d::Color3B kWhiteTileColor;
+        static const cocos2d::Color3B kBlackTileColor;
+        static const cocos2d::Color3B kBackgroundColor;
+        
+    private:
+        ChessPieceObject *          _piece;
 	};
     
     
@@ -119,18 +161,19 @@ namespace render
     
     class Chessboard
 	{
-        using ChessTileGrid = std::array<std::array<ChessTile *, 8>, 8>;
-
 	public:
-        Chessboard(attributes::ChessColor inStartColor,
+        using ChessTileGrid = std::array<std::array<ChessTile *, 8>, 8>;
+        using ChessPieceObjectVector = std::vector<ChessPieceObject *>;
+        
+        Chessboard(attributes::ChessColor inPlayerColor,
                    const cocos2d::Point & inBottomLeft,
                    float                  inBoxLen);
         virtual ~Chessboard();
         
-        void                        addAsChildrenTo(cocos2d::Node * inNode,
-                                                    int             inZOrder);
+        void                        addAsChildrenTo(cocos2d::Node * inNode);
         
 		ChessTileGrid				chessTiles;
+        ChessPieceObjectVector *    chessPieces;
 	};
     
     
@@ -157,7 +200,7 @@ namespace render
         AppStateMachine *           _stateMachine;
         
 		Chessboard *				_board;
-        ChessObjectWithImage *      _background;
+        ChessObjectWithColor *      _background;
 	};
     
     

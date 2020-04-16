@@ -69,6 +69,32 @@ ChessObject::_setImage(const char * inImagePath)
     getSprite()->setTexture(inImagePath);
 }
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark ChessObjectWithColor
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ChessObjectWithColor::ChessObjectWithColor(const cocos2d::Color3B & inColor,
+                                           const cocos2d::Rect &    inRect)
+{
+    _init(inColor, inRect);
+}
+
+void
+ChessObjectWithColor::_init(const cocos2d::Color3B & inColor,
+                        const cocos2d::Rect &    inRect)
+{
+    float width     = inRect.getMaxX() - inRect.getMinX();
+    float height    = inRect.getMaxY() - inRect.getMinY();
+    
+    getSprite()->setPosition(inRect.getMidX(), inRect.getMidY());
+    getSprite()->setContentSize(Size(width, height));
+    getSprite()->setTextureRect(Rect(inRect.getMidX(), inRect.getMidY(), width, height));
+    getSprite()->setColor(inColor);
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark ChessObjectWithImage
@@ -91,31 +117,6 @@ ChessObjectWithImage::_init(const char *  inImage,
     getSprite()->setScaleX(width / getSprite()->getContentSize().width);
     getSprite()->setScaleY(height / getSprite()->getContentSize().height);
     move(Point(inRect.getMidX(), inRect.getMidY()));
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-#pragma mark ChessTile
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-ChessTile::ChessTile(attributes::ChessColor inColor,
-                     const Rect &           inRect)
-{
-    if (inColor == attributes::ChessColor::kBlack)
-    {
-        getSprite()->setColor(Color3B::BLACK);
-    }
-    else if (inColor == attributes::ChessColor::kWhite)
-    {
-        getSprite()->setColor(Color3B::WHITE);
-    }
-    
-    float width     = inRect.getMaxX() - inRect.getMinX();
-    float height    = inRect.getMaxY() - inRect.getMinY();
-    
-    getSprite()->setPosition(inRect.getMidX(), inRect.getMidY());
-    getSprite()->setContentSize(Size(width, height));
-    getSprite()->setTextureRect(Rect(inRect.getMidX(), inRect.getMidY(), width, height));
 }
 
 
@@ -144,9 +145,9 @@ const ChessPieceObject::ImageMap ChessPieceObject::_sWhiteImageMap = {
 
 ChessPieceObject::ChessPieceObject(attributes::ChessColor     inColor,
                                    attributes::ChessPieceName inPiece,
-                                   const ChessTile &          inTile)
+                                   const ChessTile *          inTile)
 {
-    _init(inColor, inPiece, inTile.getRect());
+    _init(inColor, inPiece, inTile->getRect());
 }
 
 ChessPieceObject::ChessPieceObject(attributes::ChessColor     inColor,
@@ -161,6 +162,9 @@ ChessPieceObject::_init(attributes::ChessColor     inColor,
                         attributes::ChessPieceName inPiece,
                         const Rect &               inRect)
 {
+    _color = inColor;
+    _name = inPiece;
+    
     assert(inColor != attributes::ChessColor::kNone);
     
     const ImageMap & imgMap = ((inColor == attributes::ChessColor::kWhite) ?
@@ -181,13 +185,75 @@ ChessPieceObject::move(const ChessTile * inTile)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
+#pragma mark ChessTile
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const cocos2d::Color3B ChessTile::kWhiteTileColor  = Color3B(255, 206, 158);
+const cocos2d::Color3B ChessTile::kBlackTileColor  = Color3B(209, 139, 71);
+const cocos2d::Color3B ChessTile::kBackgroundColor = Color3B(49, 46, 43);
+
+ChessTile::ChessTile(attributes::ChessColor inColor,
+                     const Rect &           inRect) :
+ChessObjectWithColor(((inColor == attributes::ChessColor::kWhite) ?
+                      kWhiteTileColor : kBlackTileColor), inRect),
+_piece(nullptr)
+{
+    
+}
+
+ChessTile::~ChessTile()
+{
+    if (_piece != nullptr)
+    {
+        delete _piece;
+    }
+}
+
+void
+ChessTile::movePiece(ChessPieceObject * inNewPiece)
+{
+    assert(_piece == nullptr);
+    _piece = inNewPiece;
+    _piece->move(this);
+}
+
+ChessPieceObject *
+ChessTile::removePiece()
+{
+    assert(_piece != nullptr);
+    auto tmp = _piece;
+    _piece = nullptr;
+    return tmp;
+}
+
+ChessPieceObject *
+ChessTile::replacePiece(ChessPieceObject * inNewPiece)
+{
+    auto tmp = removePiece();
+    movePiece(inNewPiece);
+    return tmp;
+}
+
+ChessPieceObject *
+ChessTile::createChessPieceOnTile(attributes::ChessColor     inColor,
+                                  attributes::ChessPieceName inPiece)
+{
+    assert(_piece == nullptr);
+    movePiece(new ChessPieceObject(inColor, inPiece, this));
+    return _piece;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
 #pragma mark Chessboard
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Chessboard::Chessboard(attributes::ChessColor inStartColor,
+Chessboard::Chessboard(attributes::ChessColor inPlayerColor,
                        const Point &          inBottomLeft,
                        float                  inBoxLen)
 {
+    assert(inPlayerColor != attributes::ChessColor::kNone);
+    
     float currY = inBottomLeft.y;
     
     for (uint8_t rowNum = 0; rowNum < 8; rowNum++)
@@ -214,17 +280,101 @@ Chessboard::Chessboard(attributes::ChessColor inStartColor,
         
         currY += inBoxLen;
     }
+    
+    static constexpr uint8_t kPawnRowIndex = 1;
+    static constexpr uint8_t kMainRowIndex = 0;
+    
+    static constexpr uint8_t kKnightCols[2] = { 1, 6 };
+    static constexpr uint8_t kBishopCols[2] = { 2, 5 };
+    static constexpr uint8_t kRookCols[2] = { 0, 7 };
+    
+    uint8_t whiteRows[2] = { 0, 1 };
+    uint8_t blackRows[2] = { 7, 6 };
+    
+    uint8_t kingCol      = 4;
+    uint8_t queenCol     = 3;
+    
+    if (inPlayerColor == attributes::ChessColor::kBlack)
+    {
+        blackRows[kMainRowIndex] = 0;
+        blackRows[kPawnRowIndex] = 1;
+        
+        whiteRows[kMainRowIndex] = 7;
+        whiteRows[kPawnRowIndex] = 6;
+        
+        kingCol      = 3;
+        queenCol     = 4;
+    }
+    
+    for (auto i = 0; i < 8; i++)
+    {
+        auto whiteTile = chessTiles[whiteRows[kPawnRowIndex]][i];
+        auto blackTile = chessTiles[blackRows[kPawnRowIndex]][i];
+        
+        whiteTile->createChessPieceOnTile(attributes::ChessColor::kWhite,
+                                          attributes::ChessPieceName::kPawn);
+        
+        blackTile->createChessPieceOnTile(attributes::ChessColor::kBlack,
+                                          attributes::ChessPieceName::kPawn);
+    }
+    
+    for (auto i = 0; i < 2; i++)
+    {
+        auto whiteKnightTile = chessTiles[whiteRows[kMainRowIndex]][kKnightCols[i]];
+        auto blackKnightTile = chessTiles[blackRows[kMainRowIndex]][kKnightCols[i]];
+        
+        auto whiteBishopTile = chessTiles[whiteRows[kMainRowIndex]][kBishopCols[i]];
+        auto blackBishopTile = chessTiles[blackRows[kMainRowIndex]][kBishopCols[i]];
+        
+        auto whiteRookTile = chessTiles[whiteRows[kMainRowIndex]][kRookCols[i]];
+        auto blackRookTile = chessTiles[blackRows[kMainRowIndex]][kRookCols[i]];
+        
+        whiteKnightTile->createChessPieceOnTile(attributes::ChessColor::kWhite,
+                                                attributes::ChessPieceName::kKnight);
+        blackKnightTile->createChessPieceOnTile(attributes::ChessColor::kBlack,
+                                                attributes::ChessPieceName::kKnight);
+        
+        whiteBishopTile->createChessPieceOnTile(attributes::ChessColor::kWhite,
+                                                attributes::ChessPieceName::kBishop);
+        blackBishopTile->createChessPieceOnTile(attributes::ChessColor::kBlack,
+                                                attributes::ChessPieceName::kBishop);
+        
+        whiteRookTile->createChessPieceOnTile(attributes::ChessColor::kWhite,
+                                              attributes::ChessPieceName::kRook);
+        blackRookTile->createChessPieceOnTile(attributes::ChessColor::kBlack,
+                                              attributes::ChessPieceName::kRook);
+    }
+    
+    auto whiteKingTile = chessTiles[whiteRows[kMainRowIndex]][kingCol];
+    auto blackKingTile = chessTiles[blackRows[kMainRowIndex]][kingCol];
+    
+    auto whiteQueenTile = chessTiles[whiteRows[kMainRowIndex]][queenCol];
+    auto blackQueenTile = chessTiles[blackRows[kMainRowIndex]][queenCol];
+    
+    whiteKingTile->createChessPieceOnTile(attributes::ChessColor::kWhite,
+                                          attributes::ChessPieceName::kKing);
+    blackKingTile->createChessPieceOnTile(attributes::ChessColor::kBlack,
+                                          attributes::ChessPieceName::kKing);
+    
+    whiteQueenTile->createChessPieceOnTile(attributes::ChessColor::kWhite,
+                                           attributes::ChessPieceName::kQueen);
+    blackQueenTile->createChessPieceOnTile(attributes::ChessColor::kBlack,
+                                           attributes::ChessPieceName::kQueen);
 }
 
 void
-Chessboard::addAsChildrenTo(cocos2d::Node * inNode,
-                            int             inZOrder)
+Chessboard::addAsChildrenTo(cocos2d::Node * inNode)
 {
     for (auto row : chessTiles)
     {
         for (auto tile : row)
         {
-            tile->addAsChildTo(inNode, inZOrder);
+            tile->addAsChildTo(inNode, 0);
+            
+            if (tile->getPiece() != nullptr)
+            {
+                tile->getPiece()->addAsChildTo(inNode, 1);
+            }
         }
     }
 }
@@ -273,7 +423,7 @@ ChessboardScene::init()
         return false;
     }
     
-    _background = new ChessObjectWithImage("ChessboardSceneBackground.png",
+    _background = new ChessObjectWithColor(ChessTile::kBackgroundColor,
                                            this->getBoundingBox());
     
     _background->addAsChildTo(this);
@@ -289,10 +439,13 @@ ChessboardScene::init()
     Point bottomLeft(this->getBoundingBox().getMidX() - (boxLen * 4),
                      this->getBoundingBox().getMidY() - (boxLen * 4));
     
+//    _board = new Chessboard(attributes::ChessColor::kWhite,
+//                            bottomLeft, boxLen);
+    
     _board = new Chessboard(attributes::ChessColor::kBlack,
                             bottomLeft, boxLen);
 
-    _board->addAsChildrenTo(this, 0);
+    _board->addAsChildrenTo(this);
     
     return true;
 }
