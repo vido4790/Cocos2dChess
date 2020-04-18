@@ -26,10 +26,11 @@ static const char * kLogoImage = "logo.png";
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Scene *		
-WelcomeScene::createScene(AppStateMachine * inStateMachine)
+WelcomeScene::createScene(AppStateMachine * inStateMachine, WelcomeScene ** outWelcomeScene)
 {
 	auto scene = Scene::create();
 	auto layer = WelcomeScene::create();
+    *outWelcomeScene = layer;
     
     layer->_setStateMachine(inStateMachine);
 
@@ -93,24 +94,42 @@ WelcomeScene::_actionsOver()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
-#pragma mark WelcomeScreenState
+#pragma mark WelcomeSceneState
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Scene *
-WelcomeScreenState::_createScene()
+void
+WelcomeSceneState::_enter()
 {
-    return WelcomeScene::createScene(_getStateMachine());
+    cocos2d::log("WelcomeSceneState::_enter()");
+    
+    WelcomeScene * welcomeScene;
+    auto scene = WelcomeScene::createScene(_getStateMachine(), &welcomeScene);
+    AppDelegate::getInstance()->setNewScene(scene);
+    
+    cocos2d::log("WelcomeSceneState::_enter() new scene careated");
+}
+
+void
+WelcomeSceneState::_exit()
+{
+    cocos2d::log("WelcomeSceneState::_exit()");
 }
 
 AppState *
-WelcomeScreenState::_react(AppEvent * inEvent)
+WelcomeSceneState::_react(AppEvent * inEvent)
 {
-    cocos2d::log("WelcomeScreenState::_react(%d)", inEvent->getID());
+    cocos2d::log("WelcomeSceneState::_react(%d)", inEvent->getID());
     
 	switch (inEvent->getID())
 	{
         case ChessAppEvents::kWelcomeScreenAnimationOver:
-            return new ChessboardScreenCreateState();
+        {
+            ChessboardScene * chessboardScene;
+            auto scene = ChessboardScene::createScene(_getStateMachine(), &chessboardScene);
+            AppDelegate::getInstance()->setNewScene(scene);
+            
+            return new ChessboardSceneStaticState(chessboardScene);
+        }
 		default:
 			return new ErrorState();
 	}

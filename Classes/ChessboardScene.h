@@ -172,6 +172,9 @@ namespace render
         
         void                        addAsChildrenTo(cocos2d::Node * inNode);
         
+        bool                        getPointBoardLocation(const cocos2d::Point & inPoint,
+                                                          uint8_t * outRow, uint8_t * outCol) const;
+        
 		ChessTileGrid				chessTiles;
         ChessPieceObjectVector *    chessPieces;
 	};
@@ -187,7 +190,8 @@ namespace render
 	public:
         virtual ~ChessboardScene();
         
-	    static cocos2d::Scene * 	createScene(AppStateMachine * inStateMachine);
+	    static cocos2d::Scene * 	createScene(AppStateMachine *  inStateMachine,
+                                                ChessboardScene ** outChessBoardScene);
 	    
         virtual bool 				init();
 	    
@@ -196,6 +200,9 @@ namespace render
 	private:
         void                        _setStateMachine(AppStateMachine * inStateMachine)
         { _stateMachine = inStateMachine; }
+        
+        void                        _touchReact(cocos2d::Point inTouchLocation);
+        
         
         AppStateMachine *           _stateMachine;
         
@@ -206,16 +213,33 @@ namespace render
     
     ////////////////////////////////////////////////////////////////////////////////////////////////
     #pragma mark -
-    #pragma mark ChessboardScreenCreateState
+    #pragma mark ChessboardSceneStaticState
     ////////////////////////////////////////////////////////////////////////////////////////////////
     
-    class ChessboardScreenCreateState : public SceneState
-	{
-	public:
-		ChessboardScreenCreateState() = default;
-
+    class ChessboardSceneStaticState : public AppState
+    {
+    public:
+        ChessboardSceneStaticState(ChessboardScene * inScene);
+        
     private:
+        virtual void                _enter() override;
+        virtual void                _exit() override;
         virtual AppState *          _react(AppEvent * inEvent) override;
-        virtual cocos2d::Scene *    _createScene() override;
-	};
+        
+        ChessboardScene *           _scene;
+    };
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    #pragma mark -
+    #pragma mark ChessboardTouchEvent
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    class ChessboardTouchEvent : public AppEvent
+    {
+    public:
+        ChessboardTouchEvent(uint8_t inRowIndex, uint8_t inColIndex);
+        
+        const uint8_t                     rowIndex;
+        const uint8_t                     colIndex;
+    };
 }

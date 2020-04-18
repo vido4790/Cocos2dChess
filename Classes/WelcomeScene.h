@@ -24,7 +24,8 @@ namespace render
 	class WelcomeScene : public cocos2d::Layer
 	{
 	public:
-		static cocos2d::Scene *		createScene(AppStateMachine * inStateMachine);
+		static cocos2d::Scene *		createScene(AppStateMachine * inStateMachine,
+                                                WelcomeScene **   outWelcomeScene);
 
 		virtual bool 				init() override;
 
@@ -42,18 +43,19 @@ namespace render
     
     ////////////////////////////////////////////////////////////////////////////////////////////////
     #pragma mark -
-    #pragma mark WelcomeScreenState
+    #pragma mark WelcomeSceneState
     ////////////////////////////////////////////////////////////////////////////////////////////////
     
-	class WelcomeScreenState : public SceneState
+	class WelcomeSceneState : public AppState
 	{
 	public:
-		WelcomeScreenState() = default;
+		WelcomeSceneState() = default;
 
     private:
-		virtual AppState *	        _react(AppEvent * inEvent) override;
-        virtual cocos2d::Scene *    _createScene() override;
+        virtual void                _enter() override;
+        virtual void                _exit() override;
+        virtual AppState *          _react(AppEvent * inEvent) override;
 	};
-
-	using ChessAppInitialState = WelcomeScreenState;
+    
+	using ChessAppInitialState = WelcomeSceneState;
 }

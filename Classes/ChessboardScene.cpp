@@ -390,6 +390,32 @@ Chessboard::~Chessboard()
     }
 }
 
+bool
+Chessboard::getPointBoardLocation(const cocos2d::Point & inPoint,
+                                  uint8_t * outRow, uint8_t * outCol) const
+{
+    auto left   = chessTiles[0][0]->getRect().getMinX();
+    auto bottom = chessTiles[0][0]->getRect().getMinY();
+    auto right  = chessTiles[7][7]->getRect().getMaxX();
+    auto top    = chessTiles[7][7]->getRect().getMaxY();
+    
+    auto len    = (top - bottom) / 8;
+    
+    Rect boardRect(left, bottom, right - left, top - bottom);
+    
+    if (!boardRect.containsPoint(inPoint))
+    {
+        return false;
+    }
+    
+    *outRow = static_cast<uint8_t>((inPoint.y - bottom) / len);
+    *outCol = static_cast<uint8_t>((inPoint.x - left) / len);
+    
+    assert(chessTiles[*outRow][*outCol]->getRect().containsPoint(inPoint));
+    
+    return true;
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
@@ -403,10 +429,12 @@ ChessboardScene::~ChessboardScene()
 }
 
 Scene *
-ChessboardScene::createScene(AppStateMachine * inStateMachine)
+ChessboardScene::createScene(AppStateMachine * inStateMachine,
+                             ChessboardScene **  outChessBoardScene)
 {
     auto scene = Scene::create();
     auto layer = ChessboardScene::create();
+    *outChessBoardScene = layer;
     
     layer->_setStateMachine(inStateMachine);
     
@@ -439,31 +467,87 @@ ChessboardScene::init()
     Point bottomLeft(this->getBoundingBox().getMidX() - (boxLen * 4),
                      this->getBoundingBox().getMidY() - (boxLen * 4));
     
-//    _board = new Chessboard(attributes::ChessColor::kWhite,
-//                            bottomLeft, boxLen);
-    
     _board = new Chessboard(attributes::ChessColor::kBlack,
                             bottomLeft, boxLen);
-
+    
     _board->addAsChildrenTo(this);
     
+    auto touchEventListener = EventListenerTouchOneByOne::create();
+    touchEventListener->onTouchBegan = [] (Touch * touch, Event * event) -> bool {
+        auto scene = dynamic_cast<ChessboardScene *>(event->getCurrentTarget());
+        scene->_touchReact(touch->getLocation());
+        return true;
+    };
+    
+    this->_eventDispatcher->addEventListenerWithSceneGraphPriority(touchEventListener, this);
+    
     return true;
+}
+
+void
+ChessboardScene::_touchReact(cocos2d::Point inTouchLocation)
+{
+    uint8_t row, col;
+    
+    if (_board->getPointBoardLocation(inTouchLocation, &row, &col))
+    {
+        auto event = new ChessboardTouchEvent(row, col);
+        _stateMachine->receiveEvent(event);
+    }
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
-#pragma mark ChessboardScreenCreateState
+#pragma mark ChessboardSceneStaticState
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-AppState *
-ChessboardScreenCreateState::_react(AppEvent * inEvent)
+ChessboardSceneStaticState::ChessboardSceneStaticState(ChessboardScene * inScene) :
+_scene(inScene)
 {
-    return this;
+    
 }
 
-Scene *
-ChessboardScreenCreateState::_createScene()
+void
+ChessboardSceneStaticState::_enter()
 {
-    return ChessboardScene::createScene(_getStateMachine());
+    
 }
+
+void
+ChessboardSceneStaticState::_exit()
+{
+    
+}
+
+AppState *
+ChessboardSceneStaticState::_react(AppEvent * inEvent)
+{
+    switch (inEvent->getID())
+    {
+        case ChessAppEvents::kChessboardTileClicked:
+        {
+            auto clickEvent = dynamic_cast<ChessboardTouchEvent *>(inEvent);
+            
+            cocos2d::log("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
+            return this;
+        }
+        default:
+        {
+            return new ErrorState();
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark ChessboardTouchEvent
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ChessboardTouchEvent::ChessboardTouchEvent(uint8_t inRowIndex, uint8_t inColIndex) :
+AppEvent(ChessAppEvents::kChessboardTileClicked), rowIndex(inRowIndex), colIndex(inColIndex)
+{
+    
+}
+

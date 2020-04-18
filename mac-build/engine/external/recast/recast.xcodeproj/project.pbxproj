@@ -9,22 +9,22 @@
 /* Begin PBXAggregateTarget section */
 		09747D5F4B1243D888308880 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 2F22E1B3B1AF4F1BBEBBE8F1 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 1504F00F63DB4B59B343E56F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				959A7623162D4B239BBD803E /* CMake Rules */,
+				C7A294F9FEE14D9FB3A56C28 /* CMake Rules */,
 			);
 			dependencies = (
-				2DC9A40093CD4767B84CA8E9 /* PBXTargetDependency */,
-				10AA4218EB7E42D2ABDA3B22 /* PBXTargetDependency */,
+				C31C703B9F5B495A9994E8F9 /* PBXTargetDependency */,
+				402FF98A11724F93AF2E0DE2 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		777764519007499086C8FDB7 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 87717F196FBE406294D93D62 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 095765282A2B40DBAE03FBA9 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				C0F4CAF5F74644F8A571066B /* CMake Rules */,
+				CD1B344712A74F5CB5FD8194 /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -34,49 +34,49 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		10991EFD345E461CB05738B6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */ = {isa = PBXBuildFile; fileRef = A4A9B4A577EB4547AFC3703C /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */; };
-		1473BFA42FC946C5AAF8AB05 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */ = {isa = PBXBuildFile; fileRef = 53061CB18C484DAFB26F250B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */; };
-		1F723EE089084D1B982AF32B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */ = {isa = PBXBuildFile; fileRef = 748074F41F1D499AA0831FE9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */; };
-		26C1D735DCE54F7DA00AF31F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */ = {isa = PBXBuildFile; fileRef = 39A04E2AEEF4434FAD2C513D /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */; };
-		2E870EF945944824A691C648 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */ = {isa = PBXBuildFile; fileRef = D3AF73C6848C41D489A07C17 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */; };
-		381880FD93D844E5AB9A2822 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */ = {isa = PBXBuildFile; fileRef = 199C80AEB3044A6DA70165ED /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */; };
-		44A3739C5FED4D04B87431BB /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */ = {isa = PBXBuildFile; fileRef = 7354B17FB6F44806BFBE4F7B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */; };
-		568BCA91C7D34FD39D4A42A6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */ = {isa = PBXBuildFile; fileRef = F04EBE683208404EB94574D1 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */; };
-		6D915D4354324D36BD71A1C6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */ = {isa = PBXBuildFile; fileRef = 5E5DEA60A0B04943B9AAE6C9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */; };
-		886A214477204BEB9F508BC6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 6513275D42CC4231AF9CF61A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */; };
-		8B1E1FA3DC4E4DE1A3A0A7A9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */ = {isa = PBXBuildFile; fileRef = 28310CB95D674566A810DD0B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */; };
-		A4810B35CC1144998637EDBF /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */ = {isa = PBXBuildFile; fileRef = 51B394E2A9C24A9DA2BE954E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */; };
-		B1A0D139B23A46CE8F9EA9CF /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */ = {isa = PBXBuildFile; fileRef = A8EFAA3C02CF4C3D88CBEBA9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */; };
-		B866F4D9D915405EB9184D0A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */ = {isa = PBXBuildFile; fileRef = F9B117F5190A4147BCB41BC7 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */; };
-		C013B32BAFBC4FAC98863302 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */ = {isa = PBXBuildFile; fileRef = 409615E6E9BE4FF2B1629B48 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */; };
-		CE28588D0235434C95595C2A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */ = {isa = PBXBuildFile; fileRef = 46B0E67E823242EABB2BB614 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */; };
-		E0B4C312D3314EA8897E0701 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */ = {isa = PBXBuildFile; fileRef = 486428BC14F74B6097D1B172 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */; };
-		F68379FD3DFF4383A914923F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */ = {isa = PBXBuildFile; fileRef = D130C889C89E41249AC01A25 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */; };
+		06971334F80147C891D51F09 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */ = {isa = PBXBuildFile; fileRef = BC32D9DDFDD048309386176F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */; };
+		23A4A1FA69474BDEB63CA6B5 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */ = {isa = PBXBuildFile; fileRef = D3CD2076AF73463D82B41A39 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */; };
+		2485F9DC2E944AC9B901B6A0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */ = {isa = PBXBuildFile; fileRef = 1BA45BFCC6394587B9AAE86E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */; };
+		36744C9B099748B98B361148 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */ = {isa = PBXBuildFile; fileRef = A6EA54D08A044E9E947D1073 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */; };
+		3AF630A7A05C48E7BD78D12B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */ = {isa = PBXBuildFile; fileRef = 3886FFC46D714C29BB87743E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */; };
+		51BF1252FC854100B9FB6F55 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = FE853DC40AA649BF9833D593 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */; };
+		5E9432930D84487595674CE6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */ = {isa = PBXBuildFile; fileRef = CB3B371A9B2242998A7C5AB0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */; };
+		6F07275CA2E54132978EF9B9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */ = {isa = PBXBuildFile; fileRef = 498B363951F14BDFA11D8328 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */; };
+		7888A8B5797C478F8EC41ECE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */ = {isa = PBXBuildFile; fileRef = 740325EB8FA24EDF8E0C54DD /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */; };
+		78DD245E2A4E432F8AC21B50 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */ = {isa = PBXBuildFile; fileRef = 6E9B2FFF3AA549A791F0DAD5 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */; };
+		7E4BCB968AF147C2ADA148AB /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */ = {isa = PBXBuildFile; fileRef = 120C271F5ADC4CDBB3C35A42 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */; };
+		986C3839CA8F469491180A4A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */ = {isa = PBXBuildFile; fileRef = 4FFF409A6EAD46968FA344A6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */; };
+		A7AA121174A34652B52E0CCF /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */ = {isa = PBXBuildFile; fileRef = FDC02CDB4AE74CE6B4FA802E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */; };
+		D6D6BFD1091443399827A134 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */ = {isa = PBXBuildFile; fileRef = C37F7FF8F4364AB481C96C0F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */; };
+		D7A8F90BBFFD4873B115F310 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */ = {isa = PBXBuildFile; fileRef = B75AF106C82F44C9BD0C1BB2 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */; };
+		DEB823B4081043A4BCE5E253 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */ = {isa = PBXBuildFile; fileRef = 9D65692C9B6F46278D8CFBF6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */; };
+		E5F0951931C74DB591155A46 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */ = {isa = PBXBuildFile; fileRef = 517666B7284A41E2B5035BBC /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */; };
+		EEC072A5ADBA44A28FC995E0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */ = {isa = PBXBuildFile; fileRef = A2A9AF34A31D4A408BE5F0FE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		06856405466F4393A747FEF9 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		8DD2DCE85E4748A299C6E058 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		971AE3F4FDA34DE0831E92BF /* MinSizeRel */ = {
+		1AD44A2D9AF0438E813A6B6A /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
-		9D13B983D0AD4CF6A86B9698 /* Debug */ = {
+		A1F9EAC9AA334EC6B717760F /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		A7D2860495DD4D81B2489624 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		D2A56F7D4B7D44F8954BF10B /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -86,21 +86,21 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		5405218123D54F0F82719732 /* PBXContainerItemProxy */ = {
+		1D591574B2E042759C068593 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7AB07395B8FC400FA791D001 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 777764519007499086C8FDB7;
 			remoteInfo = ZERO_CHECK;
 		};
-		F4BB04CB41A64362975E957C /* PBXContainerItemProxy */ = {
+		5FB5A44310E24F2F9A21F047 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7AB07395B8FC400FA791D001 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 777764519007499086C8FDB7;
 			remoteInfo = ZERO_CHECK;
 		};
-		F52510BE0457413F9470A56C /* PBXContainerItemProxy */ = {
+		B8B3994818CD4B29AA0E8EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7AB07395B8FC400FA791D001 /* Project object */;
 			proxyType = 1;
@@ -110,101 +110,101 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		199C80AEB3044A6DA70165ED /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourPathQueue.cpp; path = DetourCrowd/DetourPathQueue.cpp; sourceTree = SOURCE_ROOT; };
-		28310CB95D674566A810DD0B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourProximityGrid.cpp; path = DetourCrowd/DetourProximityGrid.cpp; sourceTree = SOURCE_ROOT; };
-		39A04E2AEEF4434FAD2C513D /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourLocalBoundary.cpp; path = DetourCrowd/DetourLocalBoundary.cpp; sourceTree = SOURCE_ROOT; };
-		409615E6E9BE4FF2B1629B48 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourCrowd.cpp; path = DetourCrowd/DetourCrowd.cpp; sourceTree = SOURCE_ROOT; };
-		46B0E67E823242EABB2BB614 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMesh.cpp; path = Detour/DetourNavMesh.cpp; sourceTree = SOURCE_ROOT; };
-		486428BC14F74B6097D1B172 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourAlloc.cpp; path = Detour/DetourAlloc.cpp; sourceTree = SOURCE_ROOT; };
-		51B394E2A9C24A9DA2BE954E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMeshBuilder.cpp; path = Detour/DetourNavMeshBuilder.cpp; sourceTree = SOURCE_ROOT; };
-		53061CB18C484DAFB26F250B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMeshQuery.cpp; path = Detour/DetourNavMeshQuery.cpp; sourceTree = SOURCE_ROOT; };
-		5E5DEA60A0B04943B9AAE6C9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourPathCorridor.cpp; path = DetourCrowd/DetourPathCorridor.cpp; sourceTree = SOURCE_ROOT; };
-		6513275D42CC4231AF9CF61A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		7354B17FB6F44806BFBE4F7B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNode.cpp; path = Detour/DetourNode.cpp; sourceTree = SOURCE_ROOT; };
-		748074F41F1D499AA0831FE9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourDebugDraw.cpp; path = DebugUtils/DetourDebugDraw.cpp; sourceTree = SOURCE_ROOT; };
-		A4A9B4A577EB4547AFC3703C /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DebugDraw.cpp; path = DebugUtils/DebugDraw.cpp; sourceTree = SOURCE_ROOT; };
-		A8EFAA3C02CF4C3D88CBEBA9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourObstacleAvoidance.cpp; path = DetourCrowd/DetourObstacleAvoidance.cpp; sourceTree = SOURCE_ROOT; };
-		CD2C860ABD8144CBA80785B2 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		D130C889C89E41249AC01A25 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourTileCache.cpp; path = DetourTileCache/DetourTileCache.cpp; sourceTree = SOURCE_ROOT; };
-		D3AF73C6848C41D489A07C17 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourTileCacheBuilder.cpp; path = DetourTileCache/DetourTileCacheBuilder.cpp; sourceTree = SOURCE_ROOT; };
-		DCBF9A0339C94869A9B4957B /* ext_recast */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_recast.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F04EBE683208404EB94574D1 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourCommon.cpp; path = Detour/DetourCommon.cpp; sourceTree = SOURCE_ROOT; };
-		F9B117F5190A4147BCB41BC7 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fastlz.c; path = fastlz/fastlz.c; sourceTree = SOURCE_ROOT; };
+		120C271F5ADC4CDBB3C35A42 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMeshQuery.cpp; path = Detour/DetourNavMeshQuery.cpp; sourceTree = SOURCE_ROOT; };
+		1BA45BFCC6394587B9AAE86E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourCrowd.cpp; path = DetourCrowd/DetourCrowd.cpp; sourceTree = SOURCE_ROOT; };
+		28A9706CB9EF4600BEF2AEAE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3886FFC46D714C29BB87743E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourTileCacheBuilder.cpp; path = DetourTileCache/DetourTileCacheBuilder.cpp; sourceTree = SOURCE_ROOT; };
+		498B363951F14BDFA11D8328 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourCommon.cpp; path = Detour/DetourCommon.cpp; sourceTree = SOURCE_ROOT; };
+		4FFF409A6EAD46968FA344A6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourAlloc.cpp; path = Detour/DetourAlloc.cpp; sourceTree = SOURCE_ROOT; };
+		517666B7284A41E2B5035BBC /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMeshBuilder.cpp; path = Detour/DetourNavMeshBuilder.cpp; sourceTree = SOURCE_ROOT; };
+		6E9B2FFF3AA549A791F0DAD5 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourTileCache.cpp; path = DetourTileCache/DetourTileCache.cpp; sourceTree = SOURCE_ROOT; };
+		740325EB8FA24EDF8E0C54DD /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourProximityGrid.cpp; path = DetourCrowd/DetourProximityGrid.cpp; sourceTree = SOURCE_ROOT; };
+		9D65692C9B6F46278D8CFBF6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourPathQueue.cpp; path = DetourCrowd/DetourPathQueue.cpp; sourceTree = SOURCE_ROOT; };
+		A2A9AF34A31D4A408BE5F0FE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNode.cpp; path = Detour/DetourNode.cpp; sourceTree = SOURCE_ROOT; };
+		A6EA54D08A044E9E947D1073 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourLocalBoundary.cpp; path = DetourCrowd/DetourLocalBoundary.cpp; sourceTree = SOURCE_ROOT; };
+		B75AF106C82F44C9BD0C1BB2 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourDebugDraw.cpp; path = DebugUtils/DetourDebugDraw.cpp; sourceTree = SOURCE_ROOT; };
+		BC32D9DDFDD048309386176F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourObstacleAvoidance.cpp; path = DetourCrowd/DetourObstacleAvoidance.cpp; sourceTree = SOURCE_ROOT; };
+		C37F7FF8F4364AB481C96C0F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DebugDraw.cpp; path = DebugUtils/DebugDraw.cpp; sourceTree = SOURCE_ROOT; };
+		CB3B371A9B2242998A7C5AB0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fastlz.c; path = fastlz/fastlz.c; sourceTree = SOURCE_ROOT; };
+		D38B23ED9A2441D9AB5DA62E /* ext_recast */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_recast.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3CD2076AF73463D82B41A39 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourPathCorridor.cpp; path = DetourCrowd/DetourPathCorridor.cpp; sourceTree = SOURCE_ROOT; };
+		FDC02CDB4AE74CE6B4FA802E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DetourNavMesh.cpp; path = Detour/DetourNavMesh.cpp; sourceTree = SOURCE_ROOT; };
+		FE853DC40AA649BF9833D593 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		3CA166F421794BBFB8391CBC /* ALL_BUILD */ = {
+		19C3E578646E45F597538B17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5592DD9AAFFE46F58FFC42DC /* CMake Rules */,
-				CD2C860ABD8144CBA80785B2 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */,
+				D38B23ED9A2441D9AB5DA62E /* ext_recast */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3832BCF84AAC48C189DAD321 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				AF18B53E4F1E4C7395CEE13D /* CMake Rules */,
+				28A9706CB9EF4600BEF2AEAE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		459355EE2DAC45B78BBA7780 = {
+		85EC3E8684A84660A9C34CBB = {
 			isa = PBXGroup;
 			children = (
-				53CE9C99F46042A496D26DFB /* External */,
-				3CA166F421794BBFB8391CBC /* ALL_BUILD */,
-				C47E4DA0C70B43268048B291 /* Products */,
+				D0726B1A95B44A6DA030E5D5 /* External */,
+				3832BCF84AAC48C189DAD321 /* ALL_BUILD */,
+				19C3E578646E45F597538B17 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		53CE9C99F46042A496D26DFB /* External */ = {
+		A0CC2007DCA94F78A4718C84 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				C1FA3226370346319ED2C420 /* ext_recast */,
+				C37F7FF8F4364AB481C96C0F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */,
+				B75AF106C82F44C9BD0C1BB2 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */,
+				4FFF409A6EAD46968FA344A6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */,
+				498B363951F14BDFA11D8328 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */,
+				FDC02CDB4AE74CE6B4FA802E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */,
+				517666B7284A41E2B5035BBC /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */,
+				120C271F5ADC4CDBB3C35A42 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */,
+				A2A9AF34A31D4A408BE5F0FE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */,
+				1BA45BFCC6394587B9AAE86E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */,
+				A6EA54D08A044E9E947D1073 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */,
+				BC32D9DDFDD048309386176F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */,
+				D3CD2076AF73463D82B41A39 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */,
+				9D65692C9B6F46278D8CFBF6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */,
+				740325EB8FA24EDF8E0C54DD /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */,
+				6E9B2FFF3AA549A791F0DAD5 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */,
+				3886FFC46D714C29BB87743E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */,
+				CB3B371A9B2242998A7C5AB0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */,
 			);
-			name = External;
+			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		5592DD9AAFFE46F58FFC42DC /* CMake Rules */ = {
+		AF18B53E4F1E4C7395CEE13D /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		828B096E87964CF481A8FA4F /* Source Files */ = {
+		D0726B1A95B44A6DA030E5D5 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				A4A9B4A577EB4547AFC3703C /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */,
-				748074F41F1D499AA0831FE9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */,
-				486428BC14F74B6097D1B172 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */,
-				F04EBE683208404EB94574D1 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */,
-				46B0E67E823242EABB2BB614 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */,
-				51B394E2A9C24A9DA2BE954E /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */,
-				53061CB18C484DAFB26F250B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */,
-				7354B17FB6F44806BFBE4F7B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */,
-				409615E6E9BE4FF2B1629B48 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */,
-				39A04E2AEEF4434FAD2C513D /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */,
-				A8EFAA3C02CF4C3D88CBEBA9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */,
-				5E5DEA60A0B04943B9AAE6C9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */,
-				199C80AEB3044A6DA70165ED /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */,
-				28310CB95D674566A810DD0B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */,
-				D130C889C89E41249AC01A25 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */,
-				D3AF73C6848C41D489A07C17 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */,
-				F9B117F5190A4147BCB41BC7 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */,
+				FFB99CBAA5F74181BAE06A6B /* ext_recast */,
 			);
-			name = "Source Files";
+			name = External;
 			sourceTree = "<group>";
 		};
-		C1FA3226370346319ED2C420 /* ext_recast */ = {
+		FFB99CBAA5F74181BAE06A6B /* ext_recast */ = {
 			isa = PBXGroup;
 			children = (
-				828B096E87964CF481A8FA4F /* Source Files */,
-				6513275D42CC4231AF9CF61A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */,
+				A0CC2007DCA94F78A4718C84 /* Source Files */,
+				FE853DC40AA649BF9833D593 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/CMakeLists.txt */,
 			);
 			name = ext_recast;
-			sourceTree = "<group>";
-		};
-		C47E4DA0C70B43268048B291 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DCBF9A0339C94869A9B4957B /* ext_recast */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,18 +212,18 @@
 /* Begin PBXNativeTarget section */
 		2853C205C6B948BE8DAE0BD4 /* ext_recast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A3D33E133204A0283A962B0 /* Build configuration list for PBXNativeTarget "ext_recast" */;
+			buildConfigurationList = 8BBDD6CE9F614857B2DAAE38 /* Build configuration list for PBXNativeTarget "ext_recast" */;
 			buildPhases = (
-				385859609A3E4D02851502B6 /* Sources */,
+				DF91A23F13F642F6A2B5ABB1 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9A19049302374A608F665267 /* PBXTargetDependency */,
+				D38847C28D08411FB7269DC2 /* PBXTargetDependency */,
 			);
 			name = ext_recast;
 			productName = ext_recast;
-			productReference = DCBF9A0339C94869A9B4957B /* ext_recast */;
+			productReference = D38B23ED9A2441D9AB5DA62E /* ext_recast */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -235,18 +235,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1030;
 			};
-			buildConfigurationList = B02EFBE4E5904AAD95A5EAE2 /* Build configuration list for PBXProject "recast" */;
+			buildConfigurationList = 2E659486E2444943B66748DD /* Build configuration list for PBXProject "recast" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				9D13B983D0AD4CF6A86B9698 /* Debug */,
-				06856405466F4393A747FEF9 /* Release */,
-				971AE3F4FDA34DE0831E92BF /* MinSizeRel */,
-				8DD2DCE85E4748A299C6E058 /* RelWithDebInfo */,
+				D2A56F7D4B7D44F8954BF10B /* Debug */,
+				A7D2860495DD4D81B2489624 /* Release */,
+				1AD44A2D9AF0438E813A6B6A /* MinSizeRel */,
+				A1F9EAC9AA334EC6B717760F /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 459355EE2DAC45B78BBA7780;
+			mainGroup = 85EC3E8684A84660A9C34CBB;
 			projectDirPath = ../../../../cocos2d/external/recast;
 			projectRoot = "";
 			targets = (
@@ -258,7 +258,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		67825AFD5D014B97838D2844 = {
+		3AD654B690BD47A68878E1B3 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,7 +273,22 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		959A7623162D4B239BBD803E /* CMake Rules */ = {
+		55A4D55BDB454047A54FDB57 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C7A294F9FEE14D9FB3A56C28 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,7 +299,7 @@ exit 0";
 			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		C0F4CAF5F74644F8A571066B /* CMake Rules */ = {
+		CD1B344712A74F5CB5FD8194 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,227 +310,55 @@ exit 0";
 			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		D7F470C6E0944782B36055CE = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		385859609A3E4D02851502B6 /* Sources */ = {
+		DF91A23F13F642F6A2B5ABB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10991EFD345E461CB05738B6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */,
-				1F723EE089084D1B982AF32B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */,
-				E0B4C312D3314EA8897E0701 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */,
-				568BCA91C7D34FD39D4A42A6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */,
-				CE28588D0235434C95595C2A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */,
-				A4810B35CC1144998637EDBF /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */,
-				1473BFA42FC946C5AAF8AB05 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */,
-				44A3739C5FED4D04B87431BB /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */,
-				C013B32BAFBC4FAC98863302 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */,
-				26C1D735DCE54F7DA00AF31F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */,
-				B1A0D139B23A46CE8F9EA9CF /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */,
-				6D915D4354324D36BD71A1C6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */,
-				381880FD93D844E5AB9A2822 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */,
-				8B1E1FA3DC4E4DE1A3A0A7A9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */,
-				F68379FD3DFF4383A914923F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */,
-				2E870EF945944824A691C648 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */,
-				B866F4D9D915405EB9184D0A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */,
+				D6D6BFD1091443399827A134 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DebugDraw.cpp */,
+				D7A8F90BBFFD4873B115F310 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DebugUtils/DetourDebugDraw.cpp */,
+				986C3839CA8F469491180A4A /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourAlloc.cpp */,
+				6F07275CA2E54132978EF9B9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourCommon.cpp */,
+				A7AA121174A34652B52E0CCF /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMesh.cpp */,
+				E5F0951931C74DB591155A46 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshBuilder.cpp */,
+				7E4BCB968AF147C2ADA148AB /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNavMeshQuery.cpp */,
+				EEC072A5ADBA44A28FC995E0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/Detour/DetourNode.cpp */,
+				2485F9DC2E944AC9B901B6A0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourCrowd.cpp */,
+				36744C9B099748B98B361148 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourLocalBoundary.cpp */,
+				06971334F80147C891D51F09 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourObstacleAvoidance.cpp */,
+				23A4A1FA69474BDEB63CA6B5 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathCorridor.cpp */,
+				DEB823B4081043A4BCE5E253 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourPathQueue.cpp */,
+				7888A8B5797C478F8EC41ECE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourCrowd/DetourProximityGrid.cpp */,
+				78DD245E2A4E432F8AC21B50 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCache.cpp */,
+				3AF630A7A05C48E7BD78D12B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/DetourTileCache/DetourTileCacheBuilder.cpp */,
+				5E9432930D84487595674CE6 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/fastlz/fastlz.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		10AA4218EB7E42D2ABDA3B22 /* PBXTargetDependency */ = {
+		402FF98A11724F93AF2E0DE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
+			targetProxy = 5FB5A44310E24F2F9A21F047 /* PBXContainerItemProxy */;
+		};
+		C31C703B9F5B495A9994E8F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2853C205C6B948BE8DAE0BD4 /* ext_recast */;
-			targetProxy = F52510BE0457413F9470A56C /* PBXContainerItemProxy */;
+			targetProxy = B8B3994818CD4B29AA0E8EEA /* PBXContainerItemProxy */;
 		};
-		2DC9A40093CD4767B84CA8E9 /* PBXTargetDependency */ = {
+		D38847C28D08411FB7269DC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
-			targetProxy = 5405218123D54F0F82719732 /* PBXContainerItemProxy */;
-		};
-		9A19049302374A608F665267 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
-			targetProxy = F4BB04CB41A64362975E957C /* PBXContainerItemProxy */;
+			targetProxy = 1D591574B2E042759C068593 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		024426B23C07472E8D2AEC05 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		1E61ECDF76E8446F8F82C717 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/Debug";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/..);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "   '-std=gnu99'  ";
-				OTHER_CPLUSPLUSFLAGS = "   '-std=c++11'  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ext_recast;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		47C1DD12200642A49ADEE00B /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		51A4A2901AD9481EB186D197 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/build";
-			};
-			name = RelWithDebInfo;
-		};
-		651C9DD149714DF08ABFF8F5 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/build";
-			};
-			name = MinSizeRel;
-		};
-		67ED2BBEFE9E404CA8C4A8F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		6F43CD9C5EE54DFAAB418F3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/build";
-			};
-			name = Debug;
-		};
-		85FBF078064F406192CCE564 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		88799BB4923A4D2B9E3A9DBD /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		9E2B871FBB63470AB2DF6E38 /* Release */ = {
+		030D94AFEF5545EC85D1E087 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -535,54 +378,17 @@ exit 0";
 			};
 			name = Release;
 		};
-		A4302E0F7A704E70899FA5CD /* Debug */ = {
+		3B318E58B3DE40109B386218 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/build";
 			};
-			name = Debug;
+			name = Release;
 		};
-		AC84D084DBBD491885C87D26 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/RelWithDebInfo";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/..);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++11'  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ext_recast;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		ACB7DA4152AE4BA6A80F20B2 /* Debug */ = {
+		3C158573796D489EB1C11592 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -602,7 +408,27 @@ exit 0";
 			};
 			name = Debug;
 		};
-		C558066C824C4BE191FBDC7E /* Release */ = {
+		3C575ECA39064ED0AA7B1B1C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		4A48D519528B454287DD899A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -629,7 +455,191 @@ exit 0";
 			};
 			name = Release;
 		};
-		E8554DAB24A64BA691689629 /* MinSizeRel */ = {
+		7319D2D4259D40F5870254F3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/build";
+			};
+			name = RelWithDebInfo;
+		};
+		737FC97241FF4555A047ED07 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/build";
+			};
+			name = MinSizeRel;
+		};
+		A7BABEF15C0A41EE96A2E816 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_recast;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B5B4750DBAE443AFB7A33AF7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D1BC48A2941243F5852324F0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DCCADC1515BB49BC85E5E642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/recast/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   '-std=gnu99'  ";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_recast;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		E0C13BE7FE1643ABBFB81229 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/build";
+			};
+			name = Debug;
+		};
+		EDC0B3476F2545FA97D68B0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		EDDB2A19B4DA4CB0A81A17CE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F4A9338816EE4B91B6F9A51C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		FE19911C025545009DE2A647 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -656,59 +666,49 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		F28D70FFB09E428E9B00315F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/recast/build";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F22E1B3B1AF4F1BBEBBE8F1 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		095765282A2B40DBAE03FBA9 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACB7DA4152AE4BA6A80F20B2 /* Debug */,
-				9E2B871FBB63470AB2DF6E38 /* Release */,
-				024426B23C07472E8D2AEC05 /* MinSizeRel */,
-				47C1DD12200642A49ADEE00B /* RelWithDebInfo */,
+				F4A9338816EE4B91B6F9A51C /* Debug */,
+				EDC0B3476F2545FA97D68B0F /* Release */,
+				3C575ECA39064ED0AA7B1B1C /* MinSizeRel */,
+				D1BC48A2941243F5852324F0 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		7A3D33E133204A0283A962B0 /* Build configuration list for PBXNativeTarget "ext_recast" */ = {
+		1504F00F63DB4B59B343E56F /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E61ECDF76E8446F8F82C717 /* Debug */,
-				C558066C824C4BE191FBDC7E /* Release */,
-				E8554DAB24A64BA691689629 /* MinSizeRel */,
-				AC84D084DBBD491885C87D26 /* RelWithDebInfo */,
+				3C158573796D489EB1C11592 /* Debug */,
+				030D94AFEF5545EC85D1E087 /* Release */,
+				B5B4750DBAE443AFB7A33AF7 /* MinSizeRel */,
+				EDDB2A19B4DA4CB0A81A17CE /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		87717F196FBE406294D93D62 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		2E659486E2444943B66748DD /* Build configuration list for PBXProject "recast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A4302E0F7A704E70899FA5CD /* Debug */,
-				67ED2BBEFE9E404CA8C4A8F2 /* Release */,
-				88799BB4923A4D2B9E3A9DBD /* MinSizeRel */,
-				85FBF078064F406192CCE564 /* RelWithDebInfo */,
+				E0C13BE7FE1643ABBFB81229 /* Debug */,
+				3B318E58B3DE40109B386218 /* Release */,
+				737FC97241FF4555A047ED07 /* MinSizeRel */,
+				7319D2D4259D40F5870254F3 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		B02EFBE4E5904AAD95A5EAE2 /* Build configuration list for PBXProject "recast" */ = {
+		8BBDD6CE9F614857B2DAAE38 /* Build configuration list for PBXNativeTarget "ext_recast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6F43CD9C5EE54DFAAB418F3D /* Debug */,
-				F28D70FFB09E428E9B00315F /* Release */,
-				651C9DD149714DF08ABFF8F5 /* MinSizeRel */,
-				51A4A2901AD9481EB186D197 /* RelWithDebInfo */,
+				DCCADC1515BB49BC85E5E642 /* Debug */,
+				4A48D519528B454287DD899A /* Release */,
+				FE19911C025545009DE2A647 /* MinSizeRel */,
+				A7BABEF15C0A41EE96A2E816 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
