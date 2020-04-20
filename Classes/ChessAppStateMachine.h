@@ -4,7 +4,7 @@
  *
  *  @author     Virag Doshi
  *
- *  @brief
+ *  @brief      App-wide states and events
  *
  **************************************************************************************************/
 
@@ -27,6 +27,11 @@ namespace render
     #pragma mark ErrorState
     ////////////////////////////////////////////////////////////////////////////////////////////////
     
+    /**
+     @class          ErrorState
+     
+     @brief          A state that crashes the application with an error
+     */
 	class ErrorState : public AppState
 	{
 	public:

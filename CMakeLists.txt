@@ -61,6 +61,7 @@ list(APPEND GAME_SOURCE
      Classes/ChessboardScene.cpp
      Classes/ChessAppStateMachine.cpp
      Classes/AppStateMachine.cpp
+     Classes/ChessEngine.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
@@ -69,6 +70,7 @@ list(APPEND GAME_HEADER
      Classes/ChessAppStateMachine.h
      Classes/AppStateMachine.h
      Classes/Chess.h
+     Classes/ChessEngine.h
      )
 
 if(ANDROID)

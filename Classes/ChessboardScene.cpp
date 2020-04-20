@@ -9,10 +9,12 @@
  **************************************************************************************************/
 
 #include "ChessboardScene.h"
+#include "ChessEngine.h"
 
 
 using namespace cocos2d;
 using namespace render;
+using namespace chessEngine;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -190,6 +192,10 @@ ChessPieceObject::move(const ChessTile * inTile)
 
 const cocos2d::Color3B ChessTile::kWhiteTileColor  = Color3B(255, 206, 158);
 const cocos2d::Color3B ChessTile::kBlackTileColor  = Color3B(209, 139, 71);
+
+const cocos2d::Color3B ChessTile::kWhiteTileHighlightedColor = Color3B(246, 247, 130);
+const cocos2d::Color3B ChessTile::kBlackTileHighlightedColor = Color3B(192, 212, 79);
+
 const cocos2d::Color3B ChessTile::kBackgroundColor = Color3B(49, 46, 43);
 
 ChessTile::ChessTile(attributes::ChessColor inColor,
@@ -241,6 +247,36 @@ ChessTile::createChessPieceOnTile(attributes::ChessColor     inColor,
     assert(_piece == nullptr);
     movePiece(new ChessPieceObject(inColor, inPiece, this));
     return _piece;
+}
+
+void
+ChessTile::highlight()
+{
+    assert((getSprite()->getColor() == kWhiteTileColor) ||
+           (getSprite()->getColor() == kBlackTileColor));
+    
+    auto & color = ((getSprite()->getColor() == kWhiteTileColor) ?
+                    kWhiteTileHighlightedColor : kBlackTileHighlightedColor);
+    
+    getSprite()->setColor(color);
+}
+
+void
+ChessTile::removeHighlight()
+{
+    assert(isHighlighted());
+    
+    auto & color = ((getSprite()->getColor() == kWhiteTileHighlightedColor) ?
+                    kWhiteTileColor : kBlackTileColor);
+    
+    getSprite()->setColor(color);
+}
+
+bool
+ChessTile::isHighlighted()
+{
+    return ((getSprite()->getColor() == kWhiteTileHighlightedColor) ||
+            (getSprite()->getColor() == kBlackTileHighlightedColor));
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -424,8 +460,9 @@ Chessboard::getPointBoardLocation(const cocos2d::Point & inPoint,
 
 ChessboardScene::~ChessboardScene()
 {
-    delete _background;
-    delete _board;
+    delete background;
+    delete board;
+    delete engine;
 }
 
 Scene *
@@ -451,10 +488,11 @@ ChessboardScene::init()
         return false;
     }
     
-    _background = new ChessObjectWithColor(ChessTile::kBackgroundColor,
+    engine     = new ChessEngine();
+    background = new ChessObjectWithColor(ChessTile::kBackgroundColor,
                                            this->getBoundingBox());
     
-    _background->addAsChildTo(this);
+    background->addAsChildTo(this);
     
     float totalWidth    = this->getBoundingBox().getMaxX() - this->getBoundingBox().getMinX();
     float totalHeight   = this->getBoundingBox().getMaxY() - this->getBoundingBox().getMinY();
@@ -467,10 +505,10 @@ ChessboardScene::init()
     Point bottomLeft(this->getBoundingBox().getMidX() - (boxLen * 4),
                      this->getBoundingBox().getMidY() - (boxLen * 4));
     
-    _board = new Chessboard(attributes::ChessColor::kBlack,
+    board = new Chessboard(attributes::ChessColor::kBlack,
                             bottomLeft, boxLen);
     
-    _board->addAsChildrenTo(this);
+    board->addAsChildrenTo(this);
     
     auto touchEventListener = EventListenerTouchOneByOne::create();
     touchEventListener->onTouchBegan = [] (Touch * touch, Event * event) -> bool {
@@ -489,10 +527,10 @@ ChessboardScene::_touchReact(cocos2d::Point inTouchLocation)
 {
     uint8_t row, col;
     
-    if (_board->getPointBoardLocation(inTouchLocation, &row, &col))
+    if (board->getPointBoardLocation(inTouchLocation, &row, &col))
     {
         auto event = new ChessboardTouchEvent(row, col);
-        _stateMachine->receiveEvent(event);
+        stateMachine->receiveEvent(event);
     }
 }
 
@@ -528,8 +566,16 @@ ChessboardSceneStaticState::_react(AppEvent * inEvent)
         case ChessAppEvents::kChessboardTileClicked:
         {
             auto clickEvent = dynamic_cast<ChessboardTouchEvent *>(inEvent);
+            auto tile       = _scene->board->chessTiles[clickEvent->rowIndex][clickEvent->colIndex];
             
             cocos2d::log("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
+            
+            if (tile->hasPiece())
+            {
+                return new ChessboardScenePieceClickedState(_scene, clickEvent->rowIndex,
+                                                            clickEvent->colIndex);
+            }
+            
             return this;
         }
         default:
@@ -551,3 +597,64 @@ AppEvent(ChessAppEvents::kChessboardTileClicked), rowIndex(inRowIndex), colIndex
     
 }
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark ChessboardScenePieceClickedState
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ChessboardScenePieceClickedState::ChessboardScenePieceClickedState(ChessboardScene * inScene,
+                                                                   uint8_t inRowIndex,
+                                                                   uint8_t inColIndex) :
+_scene(inScene), _rowIndex(inRowIndex), _colIndex(inColIndex)
+{
+    
+}
+
+void
+ChessboardScenePieceClickedState::_enter()
+{
+    auto tile       = _scene->board->chessTiles[_rowIndex][_colIndex];
+    assert(tile->hasPiece());
+    
+    tile->highlight();
+}
+
+void
+ChessboardScenePieceClickedState::_exit()
+{
+    auto tile       = _scene->board->chessTiles[_rowIndex][_colIndex];
+    
+    tile->removeHighlight();
+}
+
+AppState *
+ChessboardScenePieceClickedState::_react(AppEvent * inEvent)
+{
+    switch (inEvent->getID())
+    {
+        case ChessAppEvents::kChessboardTileClicked:
+        {
+            auto clickEvent = dynamic_cast<ChessboardTouchEvent *>(inEvent);
+            auto newTile    = _scene->board->chessTiles[clickEvent->rowIndex][clickEvent->colIndex];
+            auto tile       = _scene->board->chessTiles[_rowIndex][_colIndex];
+            
+            cocos2d::log("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
+            
+            if ((newTile->hasPiece()) &&
+                (newTile->getPiece()->getColor() == tile->getPiece()->getColor()))
+            {
+                return new ChessboardScenePieceClickedState(_scene, clickEvent->rowIndex,
+                                                            clickEvent->colIndex);
+            }
+            
+            //if (
+            
+            return this;
+        }
+        default:
+        {
+            return new ErrorState();
+        }
+    }
+}

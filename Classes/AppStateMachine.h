@@ -79,7 +79,7 @@ namespace render
 			@discussion		Performs a state change upon recieving an event. Calls
 			state functions as appropriate.
 
-			@returns		the AppData struct pointer
+			@return 		the AppData struct pointer
 		 */
 		AppData *					getAppData() { return _appData; }
 
@@ -140,7 +140,7 @@ namespace render
 
 	        @param			inEvent			received event
 
-	        @returns		Object of the next state. Can be this if no state change.
+	        @return 		Object of the next state. Can be this if no state change.
 		 */
 		virtual AppState *			_react(AppEvent * inEvent) = 0;
         
@@ -175,7 +175,7 @@ namespace render
 		/**
 	        @brief          Get the event ID.
 
-	        @returns		the event ID.
+	        @return 		the event ID.
 		 */
 		ID 							getID() { return _ID; }
 

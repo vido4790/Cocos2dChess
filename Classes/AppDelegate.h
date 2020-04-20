@@ -21,8 +21,6 @@ namespace render
     @class          AppDelegate
 
     @brief          Application entry point
-
-    @discussion
  */
 class AppDelegate : private cocos2d::Application
 {
@@ -35,7 +33,7 @@ public:
 
         @discussion     Must be overriden since it's an abstract function.
 
-        @returns        bool indicating whether the app was launched correctly.
+        @return         bool indicating whether the app was launched correctly.
      */
     virtual bool                applicationDidFinishLaunching() override;
 
@@ -65,7 +63,7 @@ public:
 
         @discussion     This is simply a typecast around the base class's getInstance function.
 
-        @returns        Singleton instance of this class
+        @return         Singleton instance of this class
      */
     static AppDelegate *        getInstance()
     { dynamic_cast<AppDelegate *>(Application::getInstance()); }

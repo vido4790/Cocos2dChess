@@ -4,7 +4,7 @@
  *
  *  @author     Virag Doshi
  *
- *  @brief
+ *  @brief      Welcome scene
  *
  **************************************************************************************************/
 
@@ -21,6 +21,11 @@ namespace render
     #pragma mark WelcomeScene
     ////////////////////////////////////////////////////////////////////////////////////////////////
     
+    /**
+     @class          WelcomeScene
+     
+     @brief          The welcome scene
+     */
 	class WelcomeScene : public cocos2d::Layer
 	{
 	public:
@@ -35,9 +40,9 @@ namespace render
 		void						_actionsOver();
         
         void                        _setStateMachine(AppStateMachine * inStateMachine)
-        { _stateMachine = inStateMachine; }
+        { stateMachine = inStateMachine; }
         
-        AppStateMachine *           _stateMachine;
+        AppStateMachine *           stateMachine;
 	};
 
     
@@ -46,6 +51,11 @@ namespace render
     #pragma mark WelcomeSceneState
     ////////////////////////////////////////////////////////////////////////////////////////////////
     
+    /**
+     @class          WelcomeSceneState
+     
+     @brief          The welcome scene state
+     */
 	class WelcomeSceneState : public AppState
 	{
 	public:

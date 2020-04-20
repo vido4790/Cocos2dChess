@@ -4,7 +4,7 @@
  *
  *  @author     Virag Doshi
  *
- *  @brief
+ *  @brief      Welcome scene
  *
  **************************************************************************************************/
 
@@ -87,7 +87,7 @@ void
 WelcomeScene::_actionsOver()
 {
 	auto event = new AppEvent(ChessAppEvents::kWelcomeScreenAnimationOver);
-	_stateMachine->receiveEvent(event);
+	stateMachine->receiveEvent(event);
     cocos2d::log("Event sent");
 }
 
