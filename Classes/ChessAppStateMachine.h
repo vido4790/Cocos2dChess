@@ -20,6 +20,7 @@ namespace render
 	{
 		kWelcomeScreenAnimationOver,
         kChessboardTileClicked,
+        kChessboardClickedInEmptySpace
 	};
 
     ////////////////////////////////////////////////////////////////////////////////////////////////

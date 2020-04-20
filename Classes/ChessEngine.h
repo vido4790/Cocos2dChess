@@ -21,18 +21,37 @@ namespace chessEngine
      */
     struct Position
     {
+        static constexpr uint8_t    kRemoved = 0xFF;
+        
         uint8_t                     row;
         uint8_t                     col;
         
+        Position() :
+        row(kRemoved), col(kRemoved)
+        { }
+        
         Position(uint8_t inRowNum, uint8_t inColNum) :
         row(inRowNum), col(inColNum)
-        { assert(row < 8); assert(col < 8); }
+        { assert((row < 8) || (row == kRemoved)); assert((col < 8) || (col == kRemoved)); }
         
         static Position             getPositionByRankFile(uint8_t file, char rank)
         { return Position(file - 1, rank - 'a'); }
         
-        uint8_t                     getFile() { return row + 1; }
-        char                        getRank() { return col + 'a'; }
+        /**
+         @brief             get file number
+         */
+        uint8_t                     getFile() const { return row + 1; }
+        
+        /**
+         @brief             get rank number
+         */
+        char                        getRank() const { return col + 'a'; }
+        
+        /**
+         @brief             check if the position indicate that the piece is removed
+         */
+        bool                        isRemoved() const
+        { return (row == kRemoved) || (col == kRemoved); }
     };
     
     /**
@@ -44,6 +63,18 @@ namespace chessEngine
     {
         attributes::ChessColor      color;
         attributes::ChessPieceName  piece;
+        
+        Piece() :
+        color(attributes::ChessColor::kNone)
+        { }
+        
+        Piece(attributes::ChessColor      inColor,
+              attributes::ChessPieceName  inPiece) :
+        color(inColor), piece(inPiece)
+        { }
+        
+        bool                        isValid() const
+        { return (color != attributes::ChessColor::kNone); }
     };
     
     /**
@@ -53,8 +84,19 @@ namespace chessEngine
      */
     struct PieceAtPosition
     {
-        Piece                       piece;
+        Piece                       pieceType;
         Position                    position;
+        
+        PieceAtPosition()
+        { }
+        
+        PieceAtPosition(Piece       inPieceType,
+                        Position    inPosition) :
+        pieceType(inPieceType), position(inPosition)
+        { }
+        
+        bool                        isValid() const
+        { return pieceType.isValid(); }
     };
     
     /**
@@ -66,6 +108,20 @@ namespace chessEngine
     {
         PieceAtPosition             piece;
         Position                    dest;
+        
+        Move()
+        { }
+        
+        Move(Piece inPiece, Position inSrc, Position inDest) :
+        piece(inPiece, inSrc), dest(inDest)
+        { }
+        
+        Move(PieceAtPosition inPiece, Position inDest) :
+        piece(inPiece), dest(inDest)
+        { }
+        
+        bool                        isValid() const
+        { return piece.pieceType.isValid(); }
     };
     
     /**

@@ -22,6 +22,8 @@
 namespace chessEngine
 {
     class ChessEngine;
+    struct Position;
+    struct Move;
 }
 
 namespace render
@@ -70,6 +72,11 @@ namespace render
          @param            inNode               the parent node
          */
         void                        addAsChildTo(cocos2d::Node * inNode);
+        
+        /**
+         @brief          Remove sprite as child
+         */
+        void                        removeAsChild();
         
         /**
          @brief          Add as child with a Z Oder
@@ -317,6 +324,20 @@ namespace render
         bool                        getPointBoardLocation(const cocos2d::Point & inPoint,
                                                           uint8_t * outRow, uint8_t * outCol) const;
         
+        /**
+         @brief          Move a piece
+         
+         @discussion     The function expects the destination to be empty. If the destination is
+         outside the board, i.e. inDest.isRemoved() is true, the piece will be deleted.
+         @todo           Move the piece onto the side of the board if inDest is outside instead
+         of deleting it.
+         
+         @param     inSrc       the source square where the piece is
+         @param     inDst       the destination of the move
+         */
+        void                        movePiece(const chessEngine::Position & inSrc,
+                                              const chessEngine::Position & inDst);
+        
 		ChessTileGrid				chessTiles;
         ChessPieceObjectVector *    chessPieces;
 	};
@@ -424,6 +445,8 @@ namespace render
         virtual void                _enter() override;
         virtual void                _exit() override;
         virtual AppState *          _react(AppEvent * inEvent) override;
+        
+        void                        _movePiece(const chessEngine::Move & inMove);
         
         ChessboardScene *           _scene;
         

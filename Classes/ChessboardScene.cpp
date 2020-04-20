@@ -53,6 +53,12 @@ ChessObject::addAsChildTo(Node * inNode)
 }
 
 void
+ChessObject::removeAsChild()
+{
+    _sprite->getParent()->removeChild(_sprite);
+}
+
+void
 ChessObject::addAsChildTo(Node * inNode, int inZOrder)
 {
     addAsChildTo(inNode);
@@ -85,7 +91,7 @@ ChessObjectWithColor::ChessObjectWithColor(const cocos2d::Color3B & inColor,
 
 void
 ChessObjectWithColor::_init(const cocos2d::Color3B & inColor,
-                        const cocos2d::Rect &    inRect)
+                            const cocos2d::Rect &    inRect)
 {
     float width     = inRect.getMaxX() - inRect.getMinX();
     float height    = inRect.getMaxY() - inRect.getMinY();
@@ -452,6 +458,27 @@ Chessboard::getPointBoardLocation(const cocos2d::Point & inPoint,
     return true;
 }
 
+void
+Chessboard::movePiece(const chessEngine::Position & inSrc,
+                      const chessEngine::Position & inDst)
+{
+    auto currTile = chessTiles[inSrc.row][inSrc.col];
+    
+    auto piece = currTile->removePiece();
+    
+    if (inDst.isRemoved())
+    {
+        piece->removeAsChild();
+        delete piece;
+    }
+    else
+    {
+        auto destTile = chessTiles[inDst.row][inDst.col];
+        
+        assert(!destTile->hasPiece());
+        destTile->movePiece(piece);
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
@@ -530,6 +557,11 @@ ChessboardScene::_touchReact(cocos2d::Point inTouchLocation)
     if (board->getPointBoardLocation(inTouchLocation, &row, &col))
     {
         auto event = new ChessboardTouchEvent(row, col);
+        stateMachine->receiveEvent(event);
+    }
+    else
+    {
+        auto event = new AppEvent(ChessAppEvents::kChessboardClickedInEmptySpace);
         stateMachine->receiveEvent(event);
     }
 }
@@ -635,12 +667,22 @@ ChessboardScenePieceClickedState::_react(AppEvent * inEvent)
     {
         case ChessAppEvents::kChessboardTileClicked:
         {
+            auto tiles = _scene->board->chessTiles;
+            
             auto clickEvent = dynamic_cast<ChessboardTouchEvent *>(inEvent);
-            auto newTile    = _scene->board->chessTiles[clickEvent->rowIndex][clickEvent->colIndex];
-            auto tile       = _scene->board->chessTiles[_rowIndex][_colIndex];
+            auto newTile    = tiles[clickEvent->rowIndex][clickEvent->colIndex];
+            auto tile       = tiles[_rowIndex][_colIndex];
             
             cocos2d::log("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
             
+            // If the same tile is clicked, then stay in this state
+            if ((clickEvent->rowIndex == _rowIndex) && (clickEvent->colIndex == _colIndex))
+            {
+                return this;
+            }
+            
+            // If some other piece of the same color is clicked, switch to moving
+            // that piece instead
             if ((newTile->hasPiece()) &&
                 (newTile->getPiece()->getColor() == tile->getPiece()->getColor()))
             {
@@ -648,13 +690,45 @@ ChessboardScenePieceClickedState::_react(AppEvent * inEvent)
                                                             clickEvent->colIndex);
             }
             
-            //if (
+            // Otherwise move the piece
             
-            return this;
+            Position currPos(_rowIndex, _colIndex);
+            Position newPos(clickEvent->rowIndex, clickEvent->colIndex);
+            Piece piece(tile->getPiece()->getColor(), tile->getPiece()->getName());
+            
+            Move move(piece, currPos, newPos);
+            Move sideEffect;
+            
+            if (_scene->engine->attemptMove(move, &sideEffect))
+            {
+                if (sideEffect.isValid())
+                {
+                    _movePiece(sideEffect);
+                }
+                
+                _movePiece(move);
+            }
+            
+            return new ChessboardSceneStaticState(_scene);
+        }
+        case ChessAppEvents::kChessboardClickedInEmptySpace:
+        {
+            return new ChessboardSceneStaticState(_scene);
         }
         default:
         {
             return new ErrorState();
         }
     }
+}
+
+void
+ChessboardScenePieceClickedState::_movePiece(const chessEngine::Move & inMove)
+{
+    auto srcTile = _scene->board->chessTiles[inMove.piece.position.row][inMove.piece.position.col];
+    
+    assert(inMove.piece.pieceType.color == srcTile->getPiece()->getColor());
+    assert(inMove.piece.pieceType.piece == srcTile->getPiece()->getName());
+    
+    _scene->board->movePiece(inMove.piece.position, inMove.dest);
 }
