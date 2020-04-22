@@ -53,7 +53,9 @@ void testMasks()
 		
 		assert(__builtin_popcountll(Bitboard::kRowMasks[i].mask) == 8);
 		assert(Bitboard::kColMasks[i].mask == (0x0101010101010101 << (7 - i)));
-	}	
+	}
+
+	
 }
 
 int main()
