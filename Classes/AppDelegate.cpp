@@ -88,14 +88,14 @@ AppDelegate::applicationDidFinishLaunching()
         return false;
     }
 
-    cocos2d::log("Launching app");
+    logger("Launching app");
     
     glView = GLViewImpl::createWithRect("Chess", Rect(0, 0, 1280, 720));
     dir->setOpenGLView(glView);
 
     _stateMachine->init(new ChessAppInitialState());
     
-    cocos2d::log("Done launching app");
+    logger("Done launching app");
     
     return true;
 }

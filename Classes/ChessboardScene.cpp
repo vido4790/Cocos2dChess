@@ -600,7 +600,7 @@ ChessboardSceneStaticState::_react(AppEvent * inEvent)
             auto clickEvent = dynamic_cast<ChessboardTouchEvent *>(inEvent);
             auto tile       = _scene->board->chessTiles[clickEvent->rowIndex][clickEvent->colIndex];
             
-            cocos2d::log("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
+            logger("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
             
             if (tile->hasPiece())
             {
@@ -673,7 +673,7 @@ ChessboardScenePieceClickedState::_react(AppEvent * inEvent)
             auto newTile    = tiles[clickEvent->rowIndex][clickEvent->colIndex];
             auto tile       = tiles[_rowIndex][_colIndex];
             
-            cocos2d::log("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
+            logger("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
             
             // If the same tile is clicked, then stay in this state
             if ((clickEvent->rowIndex == _rowIndex) && (clickEvent->colIndex == _colIndex))

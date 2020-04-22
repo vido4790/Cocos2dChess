@@ -58,7 +58,7 @@ WelcomeScene::init()
     actions.pushBack(cocos2d::DelayTime::create(1.5));
     actions.pushBack(cocos2d::FadeTo::create(1.5, 0));
     actions.pushBack(cocos2d::CallFunc::create([=] () -> void {
-        cocos2d::log("Sending callback");
+        logger("Sending callback");
         this->_actionsOver();
     }));
 
@@ -88,7 +88,7 @@ WelcomeScene::_actionsOver()
 {
 	auto event = new AppEvent(ChessAppEvents::kWelcomeScreenAnimationOver);
 	stateMachine->receiveEvent(event);
-    cocos2d::log("Event sent");
+    logger("Event sent");
 }
 
 
@@ -100,25 +100,25 @@ WelcomeScene::_actionsOver()
 void
 WelcomeSceneState::_enter()
 {
-    cocos2d::log("WelcomeSceneState::_enter()");
+    logger("WelcomeSceneState::_enter()");
     
     WelcomeScene * welcomeScene;
     auto scene = WelcomeScene::createScene(_getStateMachine(), &welcomeScene);
     AppDelegate::getInstance()->setNewScene(scene);
     
-    cocos2d::log("WelcomeSceneState::_enter() new scene careated");
+    logger("WelcomeSceneState::_enter() new scene careated");
 }
 
 void
 WelcomeSceneState::_exit()
 {
-    cocos2d::log("WelcomeSceneState::_exit()");
+    logger("WelcomeSceneState::_exit()");
 }
 
 AppState *
 WelcomeSceneState::_react(AppEvent * inEvent)
 {
-    cocos2d::log("WelcomeSceneState::_react(%d)", inEvent->getID());
+    logger("WelcomeSceneState::_react(%d)", inEvent->getID());
     
 	switch (inEvent->getID())
 	{

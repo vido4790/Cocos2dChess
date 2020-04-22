@@ -12,6 +12,7 @@
 
 #include "cocos2d.h"
 
+#include "Chess.h"
 #include "ChessAppStateMachine.h"
 
 namespace render

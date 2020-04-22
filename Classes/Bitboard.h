@@ -12,6 +12,8 @@
 
 #include <cstdint>
 
+#include "Chess.h"
+
 namespace chessEngine
 {
     struct Position;

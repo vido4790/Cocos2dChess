@@ -10,6 +10,8 @@
 
 #pragma once
 
+#include "Chess.h"
+
 namespace render
 {
 	class AppState;
@@ -45,7 +47,7 @@ namespace render
         @brief          Application state machine
 
         @discussion     Application graphics state machine. Should contain as little of the game 
-        cocos2d::logic as possible.
+        logic as possible.
      */
 	class AppStateMachine final
 	{

@@ -140,7 +140,7 @@ const Bitboard    Bitboard::kStartBlackKing     = Bitboard::kSquareMasks[56 + 4]
 void
 Bitboard::print()
 {
-    cocos2d::log("\n");
+    logger("\n");
     
     for (auto row = 0; row < 8; row++)
     {
@@ -148,11 +148,11 @@ Bitboard::print()
         {
             unsigned int val = (Square(row, col).getBitboard().mask & mask) > 0;
             
-            cocos2d::log("%d", val);
+            logger("%d", val);
         }
         
-        cocos2d::log("\n");
+        logger("\n");
     }
     
-    cocos2d::log("\n");
+    logger("\n");
 }

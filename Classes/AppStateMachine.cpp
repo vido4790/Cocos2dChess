@@ -41,7 +41,7 @@ AppStateMachine::init(AppState * inInitialState)
 void
 AppStateMachine::receiveEvent(AppEvent * inEvent)
 {
-    cocos2d::log("AppStateMachine::receiveEvent(%d)", inEvent->getID());
+    logger("AppStateMachine::receiveEvent(%d)", inEvent->getID());
     
     AppState * newState = _currState->_react(inEvent);
     
