@@ -9,22 +9,22 @@
 /* Begin PBXAggregateTarget section */
 		09747D5F4B1243D888308880 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 57118E652495492AB755F70E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 6BE440DA4CBF4F81B011A615 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				531D454C74D8489CBA7B25BF /* CMake Rules */,
+				7E81AD6E46604DF4AF0C637D /* CMake Rules */,
 			);
 			dependencies = (
-				99B5C46AA79D46F889E6FF19 /* PBXTargetDependency */,
-				0B908FA756D94EC88E18CF26 /* PBXTargetDependency */,
+				30C7EA6293724677A1126A68 /* PBXTargetDependency */,
+				3A0AEBC231844C4C8B552ACD /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		777764519007499086C8FDB7 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 6211CB2C826645ADA0F1FE45 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = BBEDF75417434DECBA6C6C96 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				41629454AD1C4064BA6E58F5 /* CMake Rules */,
+				1BE14EFEE9B147D98F376F39 /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -34,57 +34,57 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3FFC152BFDEE45358EF47989 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 4CBA1208D2C84025AD13814F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */; };
-		E79DBB00117F47B686FD0BD9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */ = {isa = PBXBuildFile; fileRef = 60B896B642A542DE9A8242DE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */; };
+		359201B0D90240C5AFB35998 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */ = {isa = PBXBuildFile; fileRef = A4205DCB183A4CE08013E216 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */; };
+		BD7C1F1478474F0B8B894F24 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = CF0EF8531FBE43FBBF1AD4A0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		07753D6D1A6647BFAACEF643 /* MinSizeRel */ = {
+		3679C588A8814BF099D4137A /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
-		7DFD67BB89A146C9AEE4B078 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		AD71BFC10D7F449786F67FB9 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		B7284353A67545C9842FADCA /* Debug */ = {
+		5A4046054696408AB4CE5D03 /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Debug;
 		};
+		EA9604198C5D42BA997A04AC /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		EEE086D368674A7882B67FA5 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		0151A5BF39BE4AF7A912E9A9 /* PBXContainerItemProxy */ = {
+		4F36BBBF350F4A2F8D517BCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0731C10E9B7B4E84B00AABB9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 777764519007499086C8FDB7;
 			remoteInfo = ZERO_CHECK;
 		};
-		4BCDF5CAFBAB4B8FA7B0DF6B /* PBXContainerItemProxy */ = {
+		954DD33977854B3787295CD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0731C10E9B7B4E84B00AABB9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A38EC856AB8744628F55596C;
 			remoteInfo = ext_md5;
 		};
-		79948401C8BB464B92A99EA8 /* PBXContainerItemProxy */ = {
+		DBA6D81C768E4AADBB6828EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0731C10E9B7B4E84B00AABB9 /* Project object */;
 			proxyType = 1;
@@ -94,69 +94,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4CBA1208D2C84025AD13814F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		60B896B642A542DE9A8242DE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = md5.c; path = md5.c; sourceTree = SOURCE_ROOT; };
-		A486AC364DC94BEE9CEDA7B8 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DA8729B518EB413DB39767D1 /* ext_md5 */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_md5.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FD1F09940E342878D9E9A57 /* ext_md5 */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_md5.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5F30D7C0A548F5986AF27B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A4205DCB183A4CE08013E216 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = md5.c; path = md5.c; sourceTree = SOURCE_ROOT; };
+		CF0EF8531FBE43FBBF1AD4A0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		1C541A57FA1A4032A37FA53E /* External */ = {
+		0396C5A5CD374D08AB81A483 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				C0BDE7138D214FEBA6D460BC /* ext_md5 */,
-			);
-			name = External;
-			sourceTree = "<group>";
-		};
-		384A8868586C4F039C389CDC = {
-			isa = PBXGroup;
-			children = (
-				1C541A57FA1A4032A37FA53E /* External */,
-				C09795C334484FABBF4D85F3 /* ALL_BUILD */,
-				8E03D25BDFC149709EAA075F /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		5642A93DF89444E2A727164B /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				60B896B642A542DE9A8242DE /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */,
+				A4205DCB183A4CE08013E216 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		8E03D25BDFC149709EAA075F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DA8729B518EB413DB39767D1 /* ext_md5 */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9AFCDC5AE06F498AA036A42E /* CMake Rules */ = {
+		1AAB4B19AF814BA199E44FE7 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		C09795C334484FABBF4D85F3 /* ALL_BUILD */ = {
+		25E64070B46B41AC89B7C8A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AFCDC5AE06F498AA036A42E /* CMake Rules */,
-				A486AC364DC94BEE9CEDA7B8 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */,
+				2FD1F09940E342878D9E9A57 /* ext_md5 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		385A2E1B8A9E4203BCBA467E = {
+			isa = PBXGroup;
+			children = (
+				CEF32EF990C642FAA3CD12AD /* External */,
+				47F3F3F8F8674965AFD85FA8 /* ALL_BUILD */,
+				25E64070B46B41AC89B7C8A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DB3CCE855D54FD48344DED3 /* ext_md5 */ = {
+			isa = PBXGroup;
+			children = (
+				0396C5A5CD374D08AB81A483 /* Source Files */,
+				CF0EF8531FBE43FBBF1AD4A0 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */,
+			);
+			name = ext_md5;
+			sourceTree = "<group>";
+		};
+		47F3F3F8F8674965AFD85FA8 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				1AAB4B19AF814BA199E44FE7 /* CMake Rules */,
+				8F5F30D7C0A548F5986AF27B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		C0BDE7138D214FEBA6D460BC /* ext_md5 */ = {
+		CEF32EF990C642FAA3CD12AD /* External */ = {
 			isa = PBXGroup;
 			children = (
-				5642A93DF89444E2A727164B /* Source Files */,
-				4CBA1208D2C84025AD13814F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/CMakeLists.txt */,
+				3DB3CCE855D54FD48344DED3 /* ext_md5 */,
 			);
-			name = ext_md5;
+			name = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,18 +164,18 @@
 /* Begin PBXNativeTarget section */
 		A38EC856AB8744628F55596C /* ext_md5 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE5D05B7A0FD406A8DFB4C2C /* Build configuration list for PBXNativeTarget "ext_md5" */;
+			buildConfigurationList = 5CB66C8C11A5403B8D4862F9 /* Build configuration list for PBXNativeTarget "ext_md5" */;
 			buildPhases = (
-				8684BE396A014A71AC38AA6F /* Sources */,
+				431E3DF1A3B74ACC93220DF0 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DA3415B5660B4AD389256A54 /* PBXTargetDependency */,
+				7134AB88179349C581B814C9 /* PBXTargetDependency */,
 			);
 			name = ext_md5;
 			productName = ext_md5;
-			productReference = DA8729B518EB413DB39767D1 /* ext_md5 */;
+			productReference = 2FD1F09940E342878D9E9A57 /* ext_md5 */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -187,18 +187,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1030;
 			};
-			buildConfigurationList = 771A57F508F740D9A333073D /* Build configuration list for PBXProject "md5" */;
+			buildConfigurationList = EC440D1C7D7B4DA7A0AD14C0 /* Build configuration list for PBXProject "md5" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				B7284353A67545C9842FADCA /* Debug */,
-				AD71BFC10D7F449786F67FB9 /* Release */,
-				07753D6D1A6647BFAACEF643 /* MinSizeRel */,
-				7DFD67BB89A146C9AEE4B078 /* RelWithDebInfo */,
+				5A4046054696408AB4CE5D03 /* Debug */,
+				EA9604198C5D42BA997A04AC /* Release */,
+				3679C588A8814BF099D4137A /* MinSizeRel */,
+				EEE086D368674A7882B67FA5 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 384A8868586C4F039C389CDC;
+			mainGroup = 385A2E1B8A9E4203BCBA467E;
 			projectDirPath = ../../../../cocos2d/external/md5;
 			projectRoot = "";
 			targets = (
@@ -210,22 +210,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1EBF2223EC3641F8AF1F75C0 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		41629454AD1C4064BA6E58F5 /* CMake Rules */ = {
+		1BE14EFEE9B147D98F376F39 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,7 +221,7 @@ exit 0";
 			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5 -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		454F0A4433C0415385728DED = {
+		2CC0358944834DCE9793541E = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,7 +236,7 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		531D454C74D8489CBA7B25BF /* CMake Rules */ = {
+		7E81AD6E46604DF4AF0C637D /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,39 +247,54 @@ exit 0";
 			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5 -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
+		948CAB84AF4E4FC9B3B610CC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8684BE396A014A71AC38AA6F /* Sources */ = {
+		431E3DF1A3B74ACC93220DF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E79DBB00117F47B686FD0BD9 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */,
+				359201B0D90240C5AFB35998 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/md5.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B908FA756D94EC88E18CF26 /* PBXTargetDependency */ = {
+		30C7EA6293724677A1126A68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
-			targetProxy = 0151A5BF39BE4AF7A912E9A9 /* PBXContainerItemProxy */;
+			targetProxy = 4F36BBBF350F4A2F8D517BCD /* PBXContainerItemProxy */;
 		};
-		99B5C46AA79D46F889E6FF19 /* PBXTargetDependency */ = {
+		3A0AEBC231844C4C8B552ACD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A38EC856AB8744628F55596C /* ext_md5 */;
-			targetProxy = 4BCDF5CAFBAB4B8FA7B0DF6B /* PBXContainerItemProxy */;
+			targetProxy = 954DD33977854B3787295CD0 /* PBXContainerItemProxy */;
 		};
-		DA3415B5660B4AD389256A54 /* PBXTargetDependency */ = {
+		7134AB88179349C581B814C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
-			targetProxy = 79948401C8BB464B92A99EA8 /* PBXContainerItemProxy */;
+			targetProxy = DBA6D81C768E4AADBB6828EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		13DB0A5935894869A8EEABF2 /* RelWithDebInfo */ = {
+		1E171C66B1284E16A41F7C53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -306,27 +306,7 @@ exit 0";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		254431813F8744FABDA85690 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5";
 				USE_HEADERMAP = NO;
@@ -334,7 +314,7 @@ exit 0";
 			};
 			name = Debug;
 		};
-		267497AF83774EC79885E43C /* MinSizeRel */ = {
+		22E6F4F04F6242DF8B671A74 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -342,9 +322,29 @@ exit 0";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
 				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/build";
 			};
-			name = MinSizeRel;
+			name = RelWithDebInfo;
 		};
-		3B2C849AB6604610A2225907 /* MinSizeRel */ = {
+		38A0D352911446F584231226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		38DD33C02D92461B85C54373 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -364,43 +364,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		448E5201FD8F4D6280CE8801 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/RelWithDebInfo";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/..);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ext_md5;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		4F83E85E88A948758A074F58 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/build";
-			};
-			name = Release;
-		};
-		5156F37100F646A49C65541A /* MinSizeRel */ = {
+		47DF71CDA21A4867939A1BC0 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -426,7 +390,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		553760F0C029444B87D4ACFF /* Release */ = {
+		73EC806C2A994C6781C24C7C /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -444,19 +408,9 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
-		};
-		72285645287C474C9C9DFE88 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/build";
-			};
 			name = RelWithDebInfo;
 		};
-		81F6765F8AE840E78043C6D9 /* Release */ = {
+		7D89A624D08748FD9D34F17E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -482,17 +436,7 @@ exit 0";
 			};
 			name = Release;
 		};
-		8D45C4E8F6B4453785BB7EA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/build";
-			};
-			name = Debug;
-		};
-		990652EA20AB4131B37C323C /* MinSizeRel */ = {
+		8E3A7399C5B9420DBA9CBD12 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -512,7 +456,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		AE579A7849284DDE8811BF15 /* Debug */ = {
+		8FD116AB74624799B9F45F45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -538,7 +482,27 @@ exit 0";
 			};
 			name = Debug;
 		};
-		C938CE6E341B4945AF2B95B3 /* RelWithDebInfo */ = {
+		936975ADC29C4A9382C3BE9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/build";
+			};
+			name = Release;
+		};
+		995F35546B644236A55E658B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/build";
+			};
+			name = MinSizeRel;
+		};
+		B680F347A1E2463E98CB704D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -550,15 +514,25 @@ exit 0";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = Debug;
 		};
-		ED79C88D72624B23B6489E9D /* Release */ = {
+		E9154866CCC74050B8446FE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5/build";
+			};
+			name = Debug;
+		};
+		EBF8F3BB56AB426D8629798C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -578,7 +552,7 @@ exit 0";
 			};
 			name = Release;
 		};
-		F4BEC65B72E84E31BEBCA79B /* Debug */ = {
+		EF5A289D899C47E092D0B021 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -590,57 +564,83 @@ exit 0";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Debug;
+			name = RelWithDebInfo;
+		};
+		FD8E97197EFC4EB69D19EC61 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/md5/..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG '-std=gnu99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_md5;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/md5";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57118E652495492AB755F70E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		5CB66C8C11A5403B8D4862F9 /* Build configuration list for PBXNativeTarget "ext_md5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				254431813F8744FABDA85690 /* Debug */,
-				ED79C88D72624B23B6489E9D /* Release */,
-				3B2C849AB6604610A2225907 /* MinSizeRel */,
-				13DB0A5935894869A8EEABF2 /* RelWithDebInfo */,
+				8FD116AB74624799B9F45F45 /* Debug */,
+				7D89A624D08748FD9D34F17E /* Release */,
+				47DF71CDA21A4867939A1BC0 /* MinSizeRel */,
+				FD8E97197EFC4EB69D19EC61 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		6211CB2C826645ADA0F1FE45 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		6BE440DA4CBF4F81B011A615 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F4BEC65B72E84E31BEBCA79B /* Debug */,
-				553760F0C029444B87D4ACFF /* Release */,
-				990652EA20AB4131B37C323C /* MinSizeRel */,
-				C938CE6E341B4945AF2B95B3 /* RelWithDebInfo */,
+				B680F347A1E2463E98CB704D /* Debug */,
+				EBF8F3BB56AB426D8629798C /* Release */,
+				38DD33C02D92461B85C54373 /* MinSizeRel */,
+				EF5A289D899C47E092D0B021 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		771A57F508F740D9A333073D /* Build configuration list for PBXProject "md5" */ = {
+		BBEDF75417434DECBA6C6C96 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8D45C4E8F6B4453785BB7EA2 /* Debug */,
-				4F83E85E88A948758A074F58 /* Release */,
-				267497AF83774EC79885E43C /* MinSizeRel */,
-				72285645287C474C9C9DFE88 /* RelWithDebInfo */,
+				1E171C66B1284E16A41F7C53 /* Debug */,
+				38A0D352911446F584231226 /* Release */,
+				8E3A7399C5B9420DBA9CBD12 /* MinSizeRel */,
+				73EC806C2A994C6781C24C7C /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		CE5D05B7A0FD406A8DFB4C2C /* Build configuration list for PBXNativeTarget "ext_md5" */ = {
+		EC440D1C7D7B4DA7A0AD14C0 /* Build configuration list for PBXProject "md5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE579A7849284DDE8811BF15 /* Debug */,
-				81F6765F8AE840E78043C6D9 /* Release */,
-				5156F37100F646A49C65541A /* MinSizeRel */,
-				448E5201FD8F4D6280CE8801 /* RelWithDebInfo */,
+				E9154866CCC74050B8446FE2 /* Debug */,
+				936975ADC29C4A9382C3BE9F /* Release */,
+				995F35546B644236A55E658B /* MinSizeRel */,
+				22E6F4F04F6242DF8B671A74 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

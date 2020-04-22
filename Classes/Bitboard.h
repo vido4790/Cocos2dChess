@@ -129,21 +129,21 @@ namespace chessEngine
         void                            print();
     };
     
-    Bitboard                        operator& (Bitboard inB1, Bitboard inB2)
+    static inline Bitboard              operator& (Bitboard inB1, Bitboard inB2)
     { return Bitboard(inB1.mask & inB2.mask); }
     
-    Bitboard                        operator| (Bitboard inB1, Bitboard inB2)
+    static inline Bitboard              operator| (Bitboard inB1, Bitboard inB2)
     { return Bitboard(inB1.mask | inB2.mask); }
     
-    Bitboard                        operator^ (Bitboard inB1, Bitboard inB2)
+    static inline Bitboard              operator^ (Bitboard inB1, Bitboard inB2)
     { return Bitboard(inB1.mask ^ inB2.mask); }
     
-    Bitboard                        operator~ (Bitboard inB)
+    static inline Bitboard              operator~ (Bitboard inB)
     { return ~inB.mask; }
     
-    Bitboard                        operator<< (Bitboard inB, uint8_t inNumShifts)
+    static inline Bitboard              operator<< (Bitboard inB, uint8_t inNumShifts)
     { return inB.mask << inNumShifts; }
     
-    Bitboard                        operator>> (Bitboard inB, uint8_t inNumShifts)
+    static inline Bitboard              operator>> (Bitboard inB, uint8_t inNumShifts)
     { return inB.mask >> inNumShifts; }
 };

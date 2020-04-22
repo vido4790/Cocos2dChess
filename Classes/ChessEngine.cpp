@@ -9,7 +9,6 @@
  **************************************************************************************************/
 
 #include "ChessEngine.h"
-#include "Bitboard.h"
 
 using namespace chessEngine;
 
