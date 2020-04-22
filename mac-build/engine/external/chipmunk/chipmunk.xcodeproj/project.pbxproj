@@ -9,21 +9,21 @@
 /* Begin PBXAggregateTarget section */
 		09747D5F4B1243D888308880 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 693919F162614B5293824A6E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 2EA8348CA6A2468CB24E270E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				6064B9D18E9B412CBC7F7E16 /* CMake Rules */,
+				5CEB9115214E4E5C931FC07D /* CMake Rules */,
 			);
 			dependencies = (
-				226FC5D27992446B87C70DF7 /* PBXTargetDependency */,
+				CF779E1C8A2542AA979A3F8E /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		777764519007499086C8FDB7 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 8FB2E0644EAB4F709D8D4BC2 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 00CB4275663A4C70989FCA04 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				7497686EF1004BFA93A348AE /* CMake Rules */,
+				612FAE402A184A32B096C6BD /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -33,38 +33,38 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildStyle section */
-		85815408DB0F4A78BED6315B /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		A5BA6D20EFED43B8BC2113B8 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		BF43859B135944A4835491FA /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		EA6F711BE6054C6B96B09F7D /* Debug */ = {
+		2A69E08E2EE74935AB52D06F /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Debug;
 		};
+		35E15834D14540E98A5E7D21 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		5F48C5417F36409FB4A8BD25 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		6763A723FC3F4A39B2CAED50 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		D6CEC9EFAC324B2184B2388D /* PBXContainerItemProxy */ = {
+		402037C7CABC4E44BF4280B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2F19F3421408497AB6E8A354 /* Project object */;
 			proxyType = 1;
@@ -74,37 +74,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		052E460FBC814078BC457B85 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/chipmunk/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		77E2641ECB47445DBF167B3C /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/chipmunk/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		B93B4318D35847D8B5B45D4B = {
-			isa = PBXGroup;
-			children = (
-				F52A4C0E0D854E68AB759BEC /* ALL_BUILD */,
-				EABE02103C864808AA916720 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		DB0849DAE8994FC682CD1EC0 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		EABE02103C864808AA916720 /* Products */ = {
+		48AAD9EC28B246E5BF6B0DD2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F52A4C0E0D854E68AB759BEC /* ALL_BUILD */ = {
+		8D00E1E1CA9E4577A7BDD4C5 = {
 			isa = PBXGroup;
 			children = (
-				DB0849DAE8994FC682CD1EC0 /* CMake Rules */,
-				052E460FBC814078BC457B85 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/chipmunk/CMakeLists.txt */,
+				F9FB97D17AC54A94BBE9255A /* ALL_BUILD */,
+				48AAD9EC28B246E5BF6B0DD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8A1E835FC3A4776B43D6D84 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		F9FB97D17AC54A94BBE9255A /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				B8A1E835FC3A4776B43D6D84 /* CMake Rules */,
+				77E2641ECB47445DBF167B3C /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/chipmunk/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
@@ -118,18 +118,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1030;
 			};
-			buildConfigurationList = 6E55AC09870B4C6ABD53BF22 /* Build configuration list for PBXProject "chipmunk" */;
+			buildConfigurationList = A96D97B91DBE47218B6D6BF4 /* Build configuration list for PBXProject "chipmunk" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				EA6F711BE6054C6B96B09F7D /* Debug */,
-				A5BA6D20EFED43B8BC2113B8 /* Release */,
-				BF43859B135944A4835491FA /* MinSizeRel */,
-				85815408DB0F4A78BED6315B /* RelWithDebInfo */,
+				2A69E08E2EE74935AB52D06F /* Debug */,
+				35E15834D14540E98A5E7D21 /* Release */,
+				5F48C5417F36409FB4A8BD25 /* MinSizeRel */,
+				6763A723FC3F4A39B2CAED50 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = B93B4318D35847D8B5B45D4B;
+			mainGroup = 8D00E1E1CA9E4577A7BDD4C5;
 			projectDirPath = ../../../../cocos2d/external/chipmunk;
 			projectRoot = "";
 			targets = (
@@ -140,7 +140,29 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BE05D994C1B4CA494E05849 = {
+		5CEB9115214E4E5C931FC07D /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		612FAE402A184A32B096C6BD /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		634CB994BFE142C6A210B96F = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -155,29 +177,7 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		6064B9D18E9B412CBC7F7E16 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
-			showEnvVarsInLog = 0;
-		};
-		7497686EF1004BFA93A348AE /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
-			showEnvVarsInLog = 0;
-		};
-		8B1DF8C98B7140B39DC9703D = {
+		7B000F5C43974662B02E43F4 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,15 +195,25 @@ exit 0";
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		226FC5D27992446B87C70DF7 /* PBXTargetDependency */ = {
+		CF779E1C8A2542AA979A3F8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
-			targetProxy = D6CEC9EFAC324B2184B2388D /* PBXContainerItemProxy */;
+			targetProxy = 402037C7CABC4E44BF4280B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		166916956A6243A19792B677 /* RelWithDebInfo */ = {
+		065E486EE78D437FABFA6EAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/build";
+			};
+			name = Debug;
+		};
+		73666E9F5D4149B284B35320 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -223,7 +233,77 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		4F9187749DEC421682681638 /* Debug */ = {
+		7EB041A7194941409046A9EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/build";
+			};
+			name = Release;
+		};
+		97E1BE6DD2744000B7B717A4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BCC01946A4E3441DA5E7968B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/build";
+			};
+			name = MinSizeRel;
+		};
+		CAFA3DFC36BC4DBC83C277C8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/build";
+			};
+			name = RelWithDebInfo;
+		};
+		D2381B1DDB24462B9289E6DC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D340D25522574DB389F58D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -243,7 +323,27 @@ exit 0";
 			};
 			name = Debug;
 		};
-		5F83ADEDC6384B0EADA39373 /* Release */ = {
+		D9CECE1E771C4462A545973A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		DC2861BA72C6422C8BEA68C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -263,17 +363,7 @@ exit 0";
 			};
 			name = Release;
 		};
-		82222AE66AF6497ABBFB111D /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/build";
-			};
-			name = MinSizeRel;
-		};
-		82FFD417B9BF4A1B9A304777 /* RelWithDebInfo */ = {
+		E2DC6C882017487EA5A0685C /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -293,17 +383,7 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		854E73BF5EA5464A892B241A /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/build";
-			};
-			name = RelWithDebInfo;
-		};
-		9D17EBC045224939A9B7DFE1 /* Release */ = {
+		E84E67D2DE3D420B92BBF17A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -322,119 +402,39 @@ exit 0";
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Release;
-		};
-		A26E8E9175DF4E3B996DA445 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/build";
-			};
-			name = Release;
-		};
-		BE07888C936D45AC81881F2B /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		C2818EAB0D0643448E3736BF /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		D0119485D4B342A7803722A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		F70527D37C9C4F57A35FD53C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/chipmunk/build";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		693919F162614B5293824A6E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		00CB4275663A4C70989FCA04 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D0119485D4B342A7803722A5 /* Debug */,
-				9D17EBC045224939A9B7DFE1 /* Release */,
-				C2818EAB0D0643448E3736BF /* MinSizeRel */,
-				82FFD417B9BF4A1B9A304777 /* RelWithDebInfo */,
+				D340D25522574DB389F58D0A /* Debug */,
+				DC2861BA72C6422C8BEA68C2 /* Release */,
+				97E1BE6DD2744000B7B717A4 /* MinSizeRel */,
+				73666E9F5D4149B284B35320 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		6E55AC09870B4C6ABD53BF22 /* Build configuration list for PBXProject "chipmunk" */ = {
+		2EA8348CA6A2468CB24E270E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F70527D37C9C4F57A35FD53C /* Debug */,
-				A26E8E9175DF4E3B996DA445 /* Release */,
-				82222AE66AF6497ABBFB111D /* MinSizeRel */,
-				854E73BF5EA5464A892B241A /* RelWithDebInfo */,
+				D9CECE1E771C4462A545973A /* Debug */,
+				E84E67D2DE3D420B92BBF17A /* Release */,
+				D2381B1DDB24462B9289E6DC /* MinSizeRel */,
+				E2DC6C882017487EA5A0685C /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		8FB2E0644EAB4F709D8D4BC2 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		A96D97B91DBE47218B6D6BF4 /* Build configuration list for PBXProject "chipmunk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F9187749DEC421682681638 /* Debug */,
-				5F83ADEDC6384B0EADA39373 /* Release */,
-				BE07888C936D45AC81881F2B /* MinSizeRel */,
-				166916956A6243A19792B677 /* RelWithDebInfo */,
+				065E486EE78D437FABFA6EAA /* Debug */,
+				7EB041A7194941409046A9EB /* Release */,
+				BCC01946A4E3441DA5E7968B /* MinSizeRel */,
+				CAFA3DFC36BC4DBC83C277C8 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

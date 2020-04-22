@@ -10,6 +10,7 @@
 
 #pragma once
 
+#include "Bitboard.h"
 #include "Chess.h"
 
 namespace chessEngine
@@ -52,6 +53,12 @@ namespace chessEngine
          */
         bool                        isRemoved() const
         { return (row == kRemoved) || (col == kRemoved); }
+        
+        /**
+         @brief             check if the position indicate that the piece is removed
+         */
+        Square                     getSquare() const
+        { return Square(row, col); }
     };
     
     /**
