@@ -9,21 +9,21 @@
 /* Begin PBXAggregateTarget section */
 		09747D5F4B1243D888308880 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = BF5EDC23321F40D9BF20E8DE /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 6DFE54F3C1744B3999982F11 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				5F36F88495954690B0A1C560 /* CMake Rules */,
+				AF0C84DF51F74A2CAD95D558 /* CMake Rules */,
 			);
 			dependencies = (
-				80D484A81FDF44A89F395731 /* PBXTargetDependency */,
+				07D972599F9A405A95348A0A /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		777764519007499086C8FDB7 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 419FF864406F46E1875C3E09 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 64419385480C478BAA86FABC /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				9E6B70C335654DFBADB6E459 /* CMake Rules */,
+				3FEA29E4FC6E4BC4B5B3F0A4 /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -33,38 +33,38 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildStyle section */
-		88637AC4E28C44938AFF65D9 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		AE30FE9D50CE4507A933B00E /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		C37E46F30E5049F288DB9406 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		EFD0A5E55172416890726DAC /* Release */ = {
+		016954B407254479AE76AADD /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Release;
 		};
+		81C4E229CC1C4F01A8B1051C /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		8EACE73D181F4470A5F04F69 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		D625D6C3D40C4A17B55F936E /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		8F3AA2022FAB450CB808CA31 /* PBXContainerItemProxy */ = {
+		A5457AB192944A01B3269843 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0C28D8BF76134EC9B5251472 /* Project object */;
 			proxyType = 1;
@@ -74,39 +74,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E6E7C8DD1AD84125B16075DD /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/glsl-optimizer/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F15955EFCDCE46D3B070CF79 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/glsl-optimizer/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		2E81F5D28F8B4EF79E6E654F /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		721B92018EE843438D9A0AA1 /* Products */ = {
+		174C1184F7A5476C8653058E /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B4EC73EE3AD44E6973E3B54 = {
+		2DB6C13E1CAB437FA775ACAA /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				9F3922BD2FAE4D1DB1F539CF /* ALL_BUILD */,
-				721B92018EE843438D9A0AA1 /* Products */,
+				8622644B113D48B3B524164F /* CMake Rules */,
+				F15955EFCDCE46D3B070CF79 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/glsl-optimizer/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		4717D787F5DA40DBA1D22CE7 = {
+			isa = PBXGroup;
+			children = (
+				2DB6C13E1CAB437FA775ACAA /* ALL_BUILD */,
+				174C1184F7A5476C8653058E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9F3922BD2FAE4D1DB1F539CF /* ALL_BUILD */ = {
+		8622644B113D48B3B524164F /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
-				2E81F5D28F8B4EF79E6E654F /* CMake Rules */,
-				E6E7C8DD1AD84125B16075DD /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/glsl-optimizer/CMakeLists.txt */,
 			);
-			name = ALL_BUILD;
+			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,18 +118,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1030;
 			};
-			buildConfigurationList = 128FB9674CED416398D391A3 /* Build configuration list for PBXProject "glsl_optimizer" */;
+			buildConfigurationList = 13212FABA4004A8F851617D2 /* Build configuration list for PBXProject "glsl_optimizer" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				AE30FE9D50CE4507A933B00E /* Debug */,
-				EFD0A5E55172416890726DAC /* Release */,
-				88637AC4E28C44938AFF65D9 /* MinSizeRel */,
-				C37E46F30E5049F288DB9406 /* RelWithDebInfo */,
+				8EACE73D181F4470A5F04F69 /* Debug */,
+				016954B407254479AE76AADD /* Release */,
+				D625D6C3D40C4A17B55F936E /* MinSizeRel */,
+				81C4E229CC1C4F01A8B1051C /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 9B4EC73EE3AD44E6973E3B54;
+			mainGroup = 4717D787F5DA40DBA1D22CE7;
 			projectDirPath = "../../../../cocos2d/external/glsl-optimizer";
 			projectRoot = "";
 			targets = (
@@ -140,18 +140,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F36F88495954690B0A1C560 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
-			showEnvVarsInLog = 0;
-		};
-		9AB7A357FA584DB4AF0B7D03 = {
+		26305ED0BB14473DB237B14D = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,7 +155,7 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		9E6B70C335654DFBADB6E459 /* CMake Rules */ = {
+		3FEA29E4FC6E4BC4B5B3F0A4 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,7 +166,7 @@ exit 0";
 			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		FA791A1351B446F8B0022961 = {
+		850F800DCE17403CBF5D3AEF = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,98 +181,29 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
+		AF0C84DF51F74A2CAD95D558 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		80D484A81FDF44A89F395731 /* PBXTargetDependency */ = {
+		07D972599F9A405A95348A0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
-			targetProxy = 8F3AA2022FAB450CB808CA31 /* PBXContainerItemProxy */;
+			targetProxy = A5457AB192944A01B3269843 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0BA5C3905BBD455CAC006C6F /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/build";
-			};
-			name = RelWithDebInfo;
-		};
-		0DEC4EE20C6A4AC286701AC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		240289BE07794E92B3A3916E /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		4AA816663FF548B9801FA2D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/build";
-			};
-			name = Debug;
-		};
-		52B26EF66B7E400F8FB7AAD6 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		5BF934447D3D4B729AD4AD10 /* MinSizeRel */ = {
+		205B8AAA9570451F9F02B62A /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -303,57 +223,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		5D4F4FB7E88C4220BA04096B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/build";
-			};
-			name = Release;
-		};
-		60BBD27E0C874E1386974FE7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		86DB4752518A4B37A4996197 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		B36F18B6EA3F4189B43B5EFC /* RelWithDebInfo */ = {
+		31DBB9E01F6F45AAAAC94AF5 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -373,7 +243,7 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		B3A55C6C542846FFB27B6B3C /* MinSizeRel */ = {
+		54A008987CDF4193A15FB6AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -381,9 +251,9 @@ exit 0";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
 				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/build";
 			};
-			name = MinSizeRel;
+			name = Debug;
 		};
-		EC5B16063ACB4B71987639CD /* Release */ = {
+		5A5F4A5E829C4F85989E1E57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -402,39 +272,169 @@ exit 0";
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = Release;
+		};
+		B71D95BB49D54D86A5D69A11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		B871163344D842D9A66D949B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D5B1A78B380447ABABC8399E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/build";
+			};
+			name = RelWithDebInfo;
+		};
+		D69D3D098167442F98B2337E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D6ADC9D078234F5C95B6E3C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		D8E6A4D0692047479BBFB369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/build";
+			};
+			name = Release;
+		};
+		ED558FDE1FB54A36BB7DC284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		FE04605F27654948A3EB99B1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/glsl-optimizer/build";
+			};
+			name = MinSizeRel;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		128FB9674CED416398D391A3 /* Build configuration list for PBXProject "glsl_optimizer" */ = {
+		13212FABA4004A8F851617D2 /* Build configuration list for PBXProject "glsl_optimizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4AA816663FF548B9801FA2D3 /* Debug */,
-				5D4F4FB7E88C4220BA04096B /* Release */,
-				B3A55C6C542846FFB27B6B3C /* MinSizeRel */,
-				0BA5C3905BBD455CAC006C6F /* RelWithDebInfo */,
+				54A008987CDF4193A15FB6AD /* Debug */,
+				D8E6A4D0692047479BBFB369 /* Release */,
+				FE04605F27654948A3EB99B1 /* MinSizeRel */,
+				D5B1A78B380447ABABC8399E /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		419FF864406F46E1875C3E09 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		64419385480C478BAA86FABC /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86DB4752518A4B37A4996197 /* Debug */,
-				EC5B16063ACB4B71987639CD /* Release */,
-				52B26EF66B7E400F8FB7AAD6 /* MinSizeRel */,
-				B36F18B6EA3F4189B43B5EFC /* RelWithDebInfo */,
+				ED558FDE1FB54A36BB7DC284 /* Debug */,
+				5A5F4A5E829C4F85989E1E57 /* Release */,
+				D69D3D098167442F98B2337E /* MinSizeRel */,
+				31DBB9E01F6F45AAAAC94AF5 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		BF5EDC23321F40D9BF20E8DE /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		6DFE54F3C1744B3999982F11 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0DEC4EE20C6A4AC286701AC2 /* Debug */,
-				60BBD27E0C874E1386974FE7 /* Release */,
-				5BF934447D3D4B729AD4AD10 /* MinSizeRel */,
-				240289BE07794E92B3A3916E /* RelWithDebInfo */,
+				D6ADC9D078234F5C95B6E3C8 /* Debug */,
+				B71D95BB49D54D86A5D69A11 /* Release */,
+				205B8AAA9570451F9F02B62A /* MinSizeRel */,
+				B871163344D842D9A66D949B /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

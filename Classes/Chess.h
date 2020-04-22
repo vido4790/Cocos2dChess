@@ -16,9 +16,9 @@
 #include <ctype.h>
 
 #ifndef APP_UTILS
-#define logger      cocos2d::log
+#define LOG      cocos2d::log
 #else
-#define logger      printf
+#define LOG      printf
 #endif
 
 namespace attributes

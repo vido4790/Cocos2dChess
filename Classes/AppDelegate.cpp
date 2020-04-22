@@ -88,14 +88,14 @@ AppDelegate::applicationDidFinishLaunching()
         return false;
     }
 
-    logger("Launching app");
+    LOG("Launching app");
     
     glView = GLViewImpl::createWithRect("Chess", Rect(0, 0, 1280, 720));
     dir->setOpenGLView(glView);
 
     _stateMachine->init(new ChessAppInitialState());
     
-    logger("Done launching app");
+    LOG("Done launching app");
     
     return true;
 }

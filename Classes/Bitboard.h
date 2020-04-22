@@ -128,7 +128,7 @@ namespace chessEngine
         void                            operator<<= (uint8_t inNumShifts)
         { mask <<= inNumShifts; }
         
-        void                            print();
+        void                            print() const;
     };
     
     static inline Bitboard              operator& (Bitboard inB1, Bitboard inB2)

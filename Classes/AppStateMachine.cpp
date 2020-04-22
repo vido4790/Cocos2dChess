@@ -41,7 +41,7 @@ AppStateMachine::init(AppState * inInitialState)
 void
 AppStateMachine::receiveEvent(AppEvent * inEvent)
 {
-    logger("AppStateMachine::receiveEvent(%d)", inEvent->getID());
+    LOG("AppStateMachine::receiveEvent(%d)", inEvent->getID());
     
     AppState * newState = _currState->_react(inEvent);
     

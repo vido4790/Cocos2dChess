@@ -9,22 +9,22 @@
 /* Begin PBXAggregateTarget section */
 		09747D5F4B1243D888308880 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = BFD47B4AF38842559B1535AF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 322B43F7316E4BE2A0C7D30A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				791A659CA76844F0B6860E20 /* CMake Rules */,
+				76780AA15B85401E8FE09A86 /* CMake Rules */,
 			);
 			dependencies = (
-				CFDBCA926F0646608DABA110 /* PBXTargetDependency */,
-				435174101051439F8FBF9DBA /* PBXTargetDependency */,
+				9138BACBDED8448FBCCCBC0E /* PBXTargetDependency */,
+				B5CA36894EA24B0AA38AA163 /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		777764519007499086C8FDB7 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = EEE1C16D1E344BE29E9FC286 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = DC5EFD63774644AE9458AB2B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				0BD5072425C84705ADA88933 /* CMake Rules */,
+				F0362F773A704DDCA5EFF405 /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -34,57 +34,57 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		CF0277FF390D4E7C94AAE0F8 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D06622E660D243FE9C38528B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */; };
-		F1E2F18B8B2B41609AC3EFA3 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */ = {isa = PBXBuildFile; fileRef = E93D1B75235349CFB69E9E0F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */; };
+		EBA6D4FBB0334093814C5D58 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */ = {isa = PBXBuildFile; fileRef = 96E3CF395EFE4403A1DF7762 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */; };
+		F7DB34C65214451C8A800B77 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = B555AD7D1B684AFB8B9BA2FD /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		2FFBA94F04034C63AD28DEAF /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		4AD222645280411FA4A9D913 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		709DFEC031ED4C8B864694E2 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		985FD4296E4E43ABB3F0E963 /* RelWithDebInfo */ = {
+		073D9CE4A16241B0AF0091AA /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
+		188B0959E39240CFB991E15A /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		BF002244C30A484C9201E466 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		D1490AB2DFE24052913BF204 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		2662FE5BE25C4241B901DB99 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10BA83D6B359450F8CB85DD9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AFF50DC886A41CC9BB56868;
-			remoteInfo = ext_edtaa3func;
-		};
-		98845842F7834F66AAFE5CE8 /* PBXContainerItemProxy */ = {
+		41D2CBE78056438F87E51C36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 10BA83D6B359450F8CB85DD9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 777764519007499086C8FDB7;
 			remoteInfo = ZERO_CHECK;
 		};
-		F9B9A55E42E3455DA7939F54 /* PBXContainerItemProxy */ = {
+		A9ED025CD1C04B8AB6CAEEEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10BA83D6B359450F8CB85DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AFF50DC886A41CC9BB56868;
+			remoteInfo = ext_edtaa3func;
+		};
+		F5BE38D15CE04831BEA8A631 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 10BA83D6B359450F8CB85DD9 /* Project object */;
 			proxyType = 1;
@@ -94,69 +94,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3782702A3BEC449190695679 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		91577D48BED44ECEABD42752 /* ext_edtaa3func */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_edtaa3func.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D06622E660D243FE9C38528B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		E93D1B75235349CFB69E9E0F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = edtaa3func.cpp; path = edtaa3func.cpp; sourceTree = SOURCE_ROOT; };
+		0AAA71D0E65048C5AC387DEC /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		926BACACA17144B6A7EFE81C /* ext_edtaa3func */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libext_edtaa3func.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E3CF395EFE4403A1DF7762 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = edtaa3func.cpp; path = edtaa3func.cpp; sourceTree = SOURCE_ROOT; };
+		B555AD7D1B684AFB8B9BA2FD /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		0899B53DF5D14406B4E6B46E /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				F4C2D151FB1C4A8F89AE291F /* CMake Rules */,
-				3782702A3BEC449190695679 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		3FC351B3001D449C806D65E5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				91577D48BED44ECEABD42752 /* ext_edtaa3func */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4110DDB5A44042D79EFA79C3 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				E93D1B75235349CFB69E9E0F /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		6EFBA427DD3B40F4AED7DA4E = {
-			isa = PBXGroup;
-			children = (
-				B2D353E8122C4EA0B9C73CF8 /* External */,
-				0899B53DF5D14406B4E6B46E /* ALL_BUILD */,
-				3FC351B3001D449C806D65E5 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		B2D353E8122C4EA0B9C73CF8 /* External */ = {
-			isa = PBXGroup;
-			children = (
-				E76EE84411084864A7435552 /* ext_edtaa3func */,
-			);
-			name = External;
-			sourceTree = "<group>";
-		};
-		E76EE84411084864A7435552 /* ext_edtaa3func */ = {
-			isa = PBXGroup;
-			children = (
-				4110DDB5A44042D79EFA79C3 /* Source Files */,
-				D06622E660D243FE9C38528B /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */,
-			);
-			name = ext_edtaa3func;
-			sourceTree = "<group>";
-		};
-		F4C2D151FB1C4A8F89AE291F /* CMake Rules */ = {
+		425F43549A89415980AF7828 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		43E87D1027BF4A1993FA0ACA /* External */ = {
+			isa = PBXGroup;
+			children = (
+				84FB6E1881704F15860FE26A /* ext_edtaa3func */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		44D16A9A56CA47FCA9B179F4 = {
+			isa = PBXGroup;
+			children = (
+				43E87D1027BF4A1993FA0ACA /* External */,
+				6D0401A0930B4B3AB6933974 /* ALL_BUILD */,
+				C02F9BC6F64B4C0C929BC09D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D0401A0930B4B3AB6933974 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				425F43549A89415980AF7828 /* CMake Rules */,
+				0AAA71D0E65048C5AC387DEC /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		84FB6E1881704F15860FE26A /* ext_edtaa3func */ = {
+			isa = PBXGroup;
+			children = (
+				8FEF50E8FBC24DA7BB98C7AA /* Source Files */,
+				B555AD7D1B684AFB8B9BA2FD /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/CMakeLists.txt */,
+			);
+			name = ext_edtaa3func;
+			sourceTree = "<group>";
+		};
+		8FEF50E8FBC24DA7BB98C7AA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				96E3CF395EFE4403A1DF7762 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C02F9BC6F64B4C0C929BC09D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				926BACACA17144B6A7EFE81C /* ext_edtaa3func */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,18 +164,18 @@
 /* Begin PBXNativeTarget section */
 		8AFF50DC886A41CC9BB56868 /* ext_edtaa3func */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53B28B4595014AF99C39439C /* Build configuration list for PBXNativeTarget "ext_edtaa3func" */;
+			buildConfigurationList = 4A95D67972554815961EFC71 /* Build configuration list for PBXNativeTarget "ext_edtaa3func" */;
 			buildPhases = (
-				E658BDCDE5F849C5BCE21E69 /* Sources */,
+				76FA0EFB9D794A868999C3CB /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F904F810F16B43CD90F2DCED /* PBXTargetDependency */,
+				CF1A96CCB4A04783B476651E /* PBXTargetDependency */,
 			);
 			name = ext_edtaa3func;
 			productName = ext_edtaa3func;
-			productReference = 91577D48BED44ECEABD42752 /* ext_edtaa3func */;
+			productReference = 926BACACA17144B6A7EFE81C /* ext_edtaa3func */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -187,18 +187,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1030;
 			};
-			buildConfigurationList = 1DD62D69DBC749119899434A /* Build configuration list for PBXProject "edtaa3func" */;
+			buildConfigurationList = 40C031977BC541E69B810298 /* Build configuration list for PBXProject "edtaa3func" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				709DFEC031ED4C8B864694E2 /* Debug */,
-				4AD222645280411FA4A9D913 /* Release */,
-				2FFBA94F04034C63AD28DEAF /* MinSizeRel */,
-				985FD4296E4E43ABB3F0E963 /* RelWithDebInfo */,
+				D1490AB2DFE24052913BF204 /* Debug */,
+				188B0959E39240CFB991E15A /* Release */,
+				BF002244C30A484C9201E466 /* MinSizeRel */,
+				073D9CE4A16241B0AF0091AA /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 6EFBA427DD3B40F4AED7DA4E;
+			mainGroup = 44D16A9A56CA47FCA9B179F4;
 			projectDirPath = ../../../../cocos2d/external/edtaa3func;
 			projectRoot = "";
 			targets = (
@@ -210,7 +210,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BD5072425C84705ADA88933 /* CMake Rules */ = {
+		76780AA15B85401E8FE09A86 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,10 +218,10 @@
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		6DCCB72AF9DC4732B7B43075 = {
+		BA53A50D885C476AAD9E42F2 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,7 +236,7 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		791A659CA76844F0B6860E20 /* CMake Rules */ = {
+		F0362F773A704DDCA5EFF405 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -244,10 +244,10 @@ exit 0";
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			shellScript = "make -C /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
-		7BF3D96693D14D4F83FD938E = {
+		F8447119164842208E3D54B0 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,36 +265,36 @@ exit 0";
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E658BDCDE5F849C5BCE21E69 /* Sources */ = {
+		76FA0EFB9D794A868999C3CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1E2F18B8B2B41609AC3EFA3 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */,
+				EBA6D4FBB0334093814C5D58 /* /Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/edtaa3func.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		435174101051439F8FBF9DBA /* PBXTargetDependency */ = {
+		9138BACBDED8448FBCCCBC0E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8AFF50DC886A41CC9BB56868 /* ext_edtaa3func */;
-			targetProxy = 2662FE5BE25C4241B901DB99 /* PBXContainerItemProxy */;
+			targetProxy = A9ED025CD1C04B8AB6CAEEEE /* PBXContainerItemProxy */;
 		};
-		CFDBCA926F0646608DABA110 /* PBXTargetDependency */ = {
+		B5CA36894EA24B0AA38AA163 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
-			targetProxy = 98845842F7834F66AAFE5CE8 /* PBXContainerItemProxy */;
+			targetProxy = 41D2CBE78056438F87E51C36 /* PBXContainerItemProxy */;
 		};
-		F904F810F16B43CD90F2DCED /* PBXTargetDependency */ = {
+		CF1A96CCB4A04783B476651E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 777764519007499086C8FDB7 /* ZERO_CHECK */;
-			targetProxy = F9B9A55E42E3455DA7939F54 /* PBXContainerItemProxy */;
+			targetProxy = F5BE38D15CE04831BEA8A631 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FC0C6A255C148E89AC90EF1 /* RelWithDebInfo */ = {
+		10E34C5086F846A3963F5D0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -312,99 +312,9 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = RelWithDebInfo;
-		};
-		2985860506724AD6B6EB9A16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
 			name = Debug;
 		};
-		38A00E7493824C01A11D844B /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		626D89610D8F45F8B3A5A1E7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		765DE15489FF4990A7B314ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/build";
-			};
-			name = Debug;
-		};
-		85A15F71FE7F4B008EA79325 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		930C943373D94BE99CA8F8B8 /* Release */ = {
+		13C4850381E44B6E919CFE36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -430,17 +340,7 @@ exit 0";
 			};
 			name = Release;
 		};
-		AB19ABFBA3B04D3F8EC1BDE1 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/build";
-			};
-			name = MinSizeRel;
-		};
-		AB8576AD6D1447D8AD1CE07E /* Release */ = {
+		27E917FAFE3840138FDC724A /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -458,45 +358,29 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = MinSizeRel;
 		};
-		B5D0AABA4D8D4DD099C9637E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
-				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/build";
-			};
-			name = Release;
-		};
-		BC904C75B0A04EF094FBE4F9 /* MinSizeRel */ = {
+		30BEDD0813FA4CB081735000 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/MinSizeRel";
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/.);
 				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++11'  ";
-				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ext_edtaa3func;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = MinSizeRel;
+			name = Release;
 		};
-		C53256A7D7C54C7F8FE955D0 /* Debug */ = {
+		4DF0B4657E2C4F05B21EDE12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -522,7 +406,7 @@ exit 0";
 			};
 			name = Debug;
 		};
-		CBE2AED8A3FA4822A101E0BF /* RelWithDebInfo */ = {
+		4ED0978B24114593A9601864 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -530,9 +414,9 @@ exit 0";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
 				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/build";
 			};
-			name = RelWithDebInfo;
+			name = Release;
 		};
-		DC655B4D8B9D4461AB095204 /* RelWithDebInfo */ = {
+		5202BAB7B65F46DD8667C817 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -558,7 +442,27 @@ exit 0";
 			};
 			name = RelWithDebInfo;
 		};
-		E373BBD6D59748598D7DEF5D /* Debug */ = {
+		87265023A8CF4EB3B571A8AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		8B8680F3D25947EAB3C4424A /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -576,9 +480,39 @@ exit 0";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Debug;
+			name = RelWithDebInfo;
 		};
-		E734B94C97CE4CD1A7388674 /* MinSizeRel */ = {
+		90ED5BCFA93940E1A70DC81D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		976B60FF438D4F30B649C865 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/build";
+			};
+			name = MinSizeRel;
+		};
+		A0D5FE1A16554F68B885EB97 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -598,49 +532,115 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
+		BDF2DAC62DCF41C08D01C37B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/build";
+			};
+			name = RelWithDebInfo;
+		};
+		D0A066621AAF4F81AB0FE477 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		E897F0AE291A44BF8EF5C972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func/build";
+			};
+			name = Debug;
+		};
+		EB3031CBE50647CA96BD63FF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/edtaa3func/.);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++11'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ext_edtaa3func;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/viragdoshi/dev/git/personal/Chess/mac-build/engine/external/edtaa3func";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DD62D69DBC749119899434A /* Build configuration list for PBXProject "edtaa3func" */ = {
+		322B43F7316E4BE2A0C7D30A /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				765DE15489FF4990A7B314ED /* Debug */,
-				B5D0AABA4D8D4DD099C9637E /* Release */,
-				AB19ABFBA3B04D3F8EC1BDE1 /* MinSizeRel */,
-				CBE2AED8A3FA4822A101E0BF /* RelWithDebInfo */,
+				10E34C5086F846A3963F5D0F /* Debug */,
+				30BEDD0813FA4CB081735000 /* Release */,
+				A0D5FE1A16554F68B885EB97 /* MinSizeRel */,
+				8B8680F3D25947EAB3C4424A /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		53B28B4595014AF99C39439C /* Build configuration list for PBXNativeTarget "ext_edtaa3func" */ = {
+		40C031977BC541E69B810298 /* Build configuration list for PBXProject "edtaa3func" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C53256A7D7C54C7F8FE955D0 /* Debug */,
-				930C943373D94BE99CA8F8B8 /* Release */,
-				BC904C75B0A04EF094FBE4F9 /* MinSizeRel */,
-				DC655B4D8B9D4461AB095204 /* RelWithDebInfo */,
+				E897F0AE291A44BF8EF5C972 /* Debug */,
+				4ED0978B24114593A9601864 /* Release */,
+				976B60FF438D4F30B649C865 /* MinSizeRel */,
+				BDF2DAC62DCF41C08D01C37B /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		BFD47B4AF38842559B1535AF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		4A95D67972554815961EFC71 /* Build configuration list for PBXNativeTarget "ext_edtaa3func" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E373BBD6D59748598D7DEF5D /* Debug */,
-				626D89610D8F45F8B3A5A1E7 /* Release */,
-				E734B94C97CE4CD1A7388674 /* MinSizeRel */,
-				0FC0C6A255C148E89AC90EF1 /* RelWithDebInfo */,
+				4DF0B4657E2C4F05B21EDE12 /* Debug */,
+				13C4850381E44B6E919CFE36 /* Release */,
+				EB3031CBE50647CA96BD63FF /* MinSizeRel */,
+				5202BAB7B65F46DD8667C817 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		EEE1C16D1E344BE29E9FC286 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		DC5EFD63774644AE9458AB2B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2985860506724AD6B6EB9A16 /* Debug */,
-				AB8576AD6D1447D8AD1CE07E /* Release */,
-				85A15F71FE7F4B008EA79325 /* MinSizeRel */,
-				38A00E7493824C01A11D844B /* RelWithDebInfo */,
+				D0A066621AAF4F81AB0FE477 /* Debug */,
+				87265023A8CF4EB3B571A8AA /* Release */,
+				27E917FAFE3840138FDC724A /* MinSizeRel */,
+				90ED5BCFA93940E1A70DC81D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
