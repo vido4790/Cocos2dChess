@@ -6,3 +6,6 @@ tests:
 	g++ $(CFLAGS) $(INC) -c Classes/Bitboard.cpp -o $(OBJ)/Bitboard.o
 	g++ $(CFLAGS) $(INC) -c utils/BitboardPrint.cpp -o $(OBJ)/BitboardPrint.o
 	g++ $(OBJ)/Bitboard.o $(OBJ)/BitboardPrint.o -o $(OBJ)/test
+
+clean:
+	rm -rf $(OBJ)/*

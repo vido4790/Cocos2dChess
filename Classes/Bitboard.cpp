@@ -27,13 +27,7 @@ using namespace cocos2d;
 Position
 Square::getPosition() const
 {
-    return (isRemoved() ? Position(index / 8, index % 8) : Position());
-}
-
-Bitboard
-Square::getBitboard() const
-{
-    return (isRemoved() ? 0ULL : Bitboard::kSquareMasks[index]);
+    return (isRemoved() ? Position() : Position(_getRowNoValidation(), _getColNoValidation()));
 }
 
 
@@ -176,7 +170,7 @@ Bitboard::print() const
     {
         for (auto col = 0; col < 8; col++)
         {
-            unsigned int val = (Square(row, col).getBitboard().mask & mask) > 0;
+            unsigned int val = (getForSquare(Square(row, col)).mask & mask) > 0;
             
             LOG("%d ", val);
         }
