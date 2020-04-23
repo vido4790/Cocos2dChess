@@ -80,6 +80,8 @@ namespace chessEngine
         static const Bitboard       kStartWhiteKing;
         static const Bitboard       kStartBlackKing;
         
+        static const Bitboard       kFull;
+        
         BitboardMask                mask;
         
         struct Iterator
@@ -109,7 +111,7 @@ namespace chessEngine
         Iterator                    end() const
         { return Iterator(0x00ULL); }
         
-        Bitboard(BitboardMask inMask) :
+        Bitboard(BitboardMask inMask = 0) :
         mask(inMask)
         { }
         
