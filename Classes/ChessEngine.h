@@ -138,15 +138,45 @@ namespace chessEngine
      */
     class ChessEngine
     {
+        struct BitboardCollection
+        {
+            Bitboard                pawnsPos;
+            Bitboard                knightsPos;
+            Bitboard                bishopsPos;
+            Bitboard                rooksPos;
+            Bitboard                queensPos;
+            Bitboard                kingPos;
+            
+            Bitboard                getAll()
+            { return (pawnsPos | knightsPos |
+                      bishopsPos | rooksPos | queensPos | kingPos); }
+        };
+        
+        BitboardCollection          _whitePieces;
+        BitboardCollection          _blackPieces;
+        
     public:
-        ChessEngine() = default;
+        ChessEngine();
         
         /**
          @brief         Attempt movement of a piece from one to another
          
          @param     inMove          move structure
          @param     outSideEffect   side effect of the movement
+         @param     outPromotion    indicate that there was a promotion
          */
-        bool                        attemptMove(const Move & inMove, Move * outSideEffect);
+        bool                        attemptMove(const Move & inMove, Move * outSideEffect,
+                                                bool * outPromotion);
+        
+    private:
+        bool                        _attemptPawnMove(const Move & inMove, Move * outSideEffect,
+                                                     bool * outPromotion);
+        bool                        _attemptKnightMove(const Move & inMove, Move * outSideEffect);
+        bool                        _attemptBishopMove(const Move & inMove, Move * outSideEffect);
+        bool                        _attemptRookMove(const Move & inMove, Move * outSideEffect);
+        bool                        _attemptQueenMove(const Move & inMove, Move * outSideEffect);
+        bool                        _attemptKingMove(const Move & inMove, Move * outSideEffect);
+        
+        void                        _simpleMoveAndKill(const Move & inMove, Move * outSideEffect);
     };
 }

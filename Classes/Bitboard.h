@@ -76,6 +76,7 @@ namespace chessEngine
         static const Bitboard       kADiagMasks[15];
         static const Bitboard       kSquareMasks[64];
         
+    public:
         static const Bitboard       kStartWhitePawns;
         static const Bitboard       kStartBlackPawns;
         
@@ -96,7 +97,6 @@ namespace chessEngine
         
         static const Bitboard       kFull;
         
-    public:
         BitboardMask                mask;
         
         struct Iterator
@@ -144,6 +144,18 @@ namespace chessEngine
         
         void                            operator<<= (uint8_t inNumShifts)
         { mask <<= inNumShifts; }
+
+        bool                            operator== (BitboardMask inOtherMask)
+        { return mask == inOtherMask; }
+        
+        bool                            operator!= (BitboardMask inOtherMask)
+        { return mask != inOtherMask; }
+        
+        bool                            operator== (Bitboard inOther)
+        { return mask == inOther.mask; }
+        
+        bool                            operator!= (Bitboard inOther)
+        { return mask != inOther.mask; }
         
         void                            print() const;
         
@@ -179,9 +191,6 @@ namespace chessEngine
         
         static Bitboard                 getForADiagWith(Square inSq)
         { return getForADiag(getADiagNum(inSq)); }
-        
-        static Bitboard                 getFull()
-        { return kFull; }
     };
     
     static inline Bitboard              operator& (Bitboard inB1, Bitboard inB2)

@@ -34,7 +34,7 @@ void testMasks()
 		wholeMask |= Bitboard::getForSquare(i).mask;
 	}
 
-	assert(wholeMask == Bitboard::getFull().mask);
+	assert(wholeMask == Bitboard::kFull.mask);
 	wholeMask = 0;
 
 	LOG("\nRows\n");
@@ -52,7 +52,7 @@ void testMasks()
 		wholeMask |= Bitboard::getForRow(i).mask;
 	}
 
-	assert(wholeMask == Bitboard::getFull().mask);
+	assert(wholeMask == Bitboard::kFull.mask);
 	wholeMask = 0;
 
 	LOG("\nCols\n");
@@ -70,7 +70,7 @@ void testMasks()
 		wholeMask |= Bitboard::getForCol(i).mask;
 	}
 
-	assert(wholeMask == Bitboard::getFull().mask);
+	assert(wholeMask == Bitboard::kFull.mask);
 	wholeMask = 0;
 
 	BitboardMask aWholeMask = 0;
@@ -118,8 +118,8 @@ void testMasks()
 		aWholeMask |= Bitboard::getForADiag(i).mask;
 	}
 
-	assert(wholeMask == Bitboard::getFull().mask);
-	assert(aWholeMask == Bitboard::getFull().mask);
+	assert(wholeMask == Bitboard::kFull.mask);
+	assert(aWholeMask == Bitboard::kFull.mask);
 	wholeMask = 0;
 }
 

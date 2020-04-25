@@ -463,18 +463,18 @@ Chessboard::movePiece(const chessEngine::Position & inSrc,
                       const chessEngine::Position & inDst)
 {
     auto currTile = chessTiles[inSrc.row][inSrc.col];
+    auto destTile = chessTiles[inDst.row][inDst.col];
     
     auto piece = currTile->removePiece();
     
     if (inDst.isRemoved())
     {
         piece->removeAsChild();
+        destTile->removePiece();
         delete piece;
     }
     else
     {
-        auto destTile = chessTiles[inDst.row][inDst.col];
-        
         assert(!destTile->hasPiece());
         destTile->movePiece(piece);
     }
@@ -532,7 +532,7 @@ ChessboardScene::init()
     Point bottomLeft(this->getBoundingBox().getMidX() - (boxLen * 4),
                      this->getBoundingBox().getMidY() - (boxLen * 4));
     
-    board = new Chessboard(attributes::ChessColor::kBlack,
+    board = new Chessboard(attributes::ChessColor::kWhite,
                             bottomLeft, boxLen);
     
     board->addAsChildrenTo(this);
@@ -698,8 +698,9 @@ ChessboardScenePieceClickedState::_react(AppEvent * inEvent)
             
             Move move(piece, currPos, newPos);
             Move sideEffect;
+            bool isPromotion;
             
-            if (_scene->engine->attemptMove(move, &sideEffect))
+            if (_scene->engine->attemptMove(move, &sideEffect, &isPromotion))
             {
                 if (sideEffect.isValid())
                 {
