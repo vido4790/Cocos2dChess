@@ -328,7 +328,7 @@ namespace render
          @brief          Move a piece
          
          @discussion     The function expects the destination to be empty. If the destination is
-         outside the board, i.e. inDest.isRemoved() is true, the piece will be deleted.
+         outside the board, i.e. inDest.isOutside() is true, the piece will be deleted.
          @todo           Move the piece onto the side of the board if inDest is outside instead
          of deleting it.
          

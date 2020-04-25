@@ -27,7 +27,7 @@ using namespace cocos2d;
 Position
 Square::getPosition() const
 {
-    return (isRemoved() ? Position() : Position(_getRowNoValidation(), _getColNoValidation()));
+    return (isOutside() ? Position() : Position(_getRowNoValidation(), _getColNoValidation()));
 }
 
 

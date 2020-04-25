@@ -32,12 +32,12 @@ namespace attributes
 
 	enum class ChessPieceName : uint8_t
 	{
-		kPawn,
-		kKnight,
-		kBishop,
-		kRook,
-		kQueen,
-		kKing
+		kPawn   = 0,
+		kKnight = 1,
+		kBishop = 2,
+		kRook   = 3,
+		kQueen  = 4,
+		kKing   = 5
 	};
     
     struct EnumClassHash

@@ -463,18 +463,17 @@ Chessboard::movePiece(const chessEngine::Position & inSrc,
                       const chessEngine::Position & inDst)
 {
     auto currTile = chessTiles[inSrc.row][inSrc.col];
-    auto destTile = chessTiles[inDst.row][inDst.col];
-    
     auto piece = currTile->removePiece();
     
-    if (inDst.isRemoved())
+    if (inDst.isOutside())
     {
         piece->removeAsChild();
-        destTile->removePiece();
         delete piece;
     }
     else
     {
+        auto destTile = chessTiles[inDst.row][inDst.col];
+        
         assert(!destTile->hasPiece());
         destTile->movePiece(piece);
     }
@@ -595,6 +594,10 @@ ChessboardSceneStaticState::_react(AppEvent * inEvent)
 {
     switch (inEvent->getID())
     {
+        case ChessAppEvents::kChessboardClickedInEmptySpace:
+        {
+            return this;
+        }
         case ChessAppEvents::kChessboardTileClicked:
         {
             auto clickEvent = dynamic_cast<ChessboardTouchEvent *>(inEvent);
@@ -694,15 +697,14 @@ ChessboardScenePieceClickedState::_react(AppEvent * inEvent)
             
             Position currPos(_rowIndex, _colIndex);
             Position newPos(clickEvent->rowIndex, clickEvent->colIndex);
-            Piece piece(tile->getPiece()->getColor(), tile->getPiece()->getName());
             
-            Move move(piece, currPos, newPos);
+            Move move(currPos, newPos);
             Move sideEffect;
             bool isPromotion;
             
             if (_scene->engine->attemptMove(move, &sideEffect, &isPromotion))
             {
-                if (sideEffect.isValid())
+                if (!sideEffect.src.isOutside())
                 {
                     _movePiece(sideEffect);
                 }
@@ -726,10 +728,5 @@ ChessboardScenePieceClickedState::_react(AppEvent * inEvent)
 void
 ChessboardScenePieceClickedState::_movePiece(const chessEngine::Move & inMove)
 {
-    auto srcTile = _scene->board->chessTiles[inMove.piece.position.row][inMove.piece.position.col];
-    
-    assert(inMove.piece.pieceType.color == srcTile->getPiece()->getColor());
-    assert(inMove.piece.pieceType.piece == srcTile->getPiece()->getName());
-    
-    _scene->board->movePiece(inMove.piece.position, inMove.dest);
+    _scene->board->movePiece(inMove.src, inMove.dest);
 }

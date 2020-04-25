@@ -44,14 +44,14 @@ namespace chessEngine
         index(inRowNum * 8 + inColNum)
         { }
         
-        bool                        isRemoved() const
+        bool                        isOutside() const
         { return index == kRemoved; }
         
         uint8_t                     getRow() const
-        { return (isRemoved() ? kRemoved : _getRowNoValidation()); }
+        { return (isOutside() ? kRemoved : _getRowNoValidation()); }
         
         uint8_t                     getCol() const
-        { return (isRemoved() ? kRemoved : _getColNoValidation()); }
+        { return (isOutside() ? kRemoved : _getColNoValidation()); }
         
         Position                    getPosition() const;
         
