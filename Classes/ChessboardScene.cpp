@@ -605,7 +605,8 @@ ChessboardSceneStaticState::_react(AppEvent * inEvent)
             
             LOG("Touch on %d, %d\n\n", clickEvent->rowIndex, clickEvent->colIndex);
             
-            if (tile->hasPiece())
+            if ((tile->hasPiece()) &&
+                 (_scene->engine->getCurrMove() == tile->getPiece()->getColor()))
             {
                 return new ChessboardScenePieceClickedState(_scene, clickEvent->rowIndex,
                                                             clickEvent->colIndex);

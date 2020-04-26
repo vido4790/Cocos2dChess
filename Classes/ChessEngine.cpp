@@ -46,7 +46,8 @@ _whitePieces(Bitboard::kStartWhitePawns, Bitboard::kStartWhiteKnights,
              Bitboard::kStartWhiteQueen, Bitboard::kStartWhiteKing),
 _blackPieces(Bitboard::kStartBlackPawns, Bitboard::kStartBlackKnights,
              Bitboard::kStartBlackBishops, Bitboard::kStartBlackRooks,
-             Bitboard::kStartBlackQueen, Bitboard::kStartBlackKing)
+             Bitboard::kStartBlackQueen, Bitboard::kStartBlackKing),
+_currTurn(attributes::ChessColor::kWhite)
 {
     
 }
@@ -58,18 +59,18 @@ ChessEngine::attemptMove(const Move & inMove, Move * outSideEffect,
     bool ret = false;
     
     attributes::ChessPieceName piece;
-    attributes::ChessColor color;
+    attributes::ChessColor color = getCurrMove();
     
     // Start with an invalid move
-    *outSideEffect = Move();
+    *outSideEffect = Move::invalid();
     
-    if (_whitePieces.getPieceAt(inMove.src, &piece))
+    if (color == attributes::ChessColor::kWhite)
     {
-        color = attributes::ChessColor::kWhite;
+        assert(_whitePieces.getPieceAt(inMove.src, &piece));
     }
-    else if(_blackPieces.getPieceAt(inMove.src, &piece))
+    else if(color == attributes::ChessColor::kBlack)
     {
-        color = attributes::ChessColor::kBlack;
+        assert(_blackPieces.getPieceAt(inMove.src, &piece));
     }
     else
     {
@@ -80,31 +81,44 @@ ChessEngine::attemptMove(const Move & inMove, Move * outSideEffect,
     {
         case attributes::ChessPieceName::kPawn:
         {
-            return _attemptPawnMove(color, inMove, outSideEffect, outPromotion);
+            ret = _attemptPawnMove(color, inMove, outSideEffect, outPromotion);
+            break;
         }
         case attributes::ChessPieceName::kKnight:
         {
-            return _attemptKnightMove(color, inMove, outSideEffect);
+            ret = _attemptKnightMove(color, inMove, outSideEffect);
+            break;
         }
         case attributes::ChessPieceName::kBishop:
         {
-            return _attemptBishopMove(color, inMove, outSideEffect);
+            ret = _attemptBishopMove(color, inMove, outSideEffect);
+            break;
         }
         case attributes::ChessPieceName::kRook:
         {
-            return _attemptRookMove(color, inMove, outSideEffect);
+            ret = _attemptRookMove(color, inMove, outSideEffect);
+            break;
         }
         case attributes::ChessPieceName::kQueen:
         {
-            return _attemptQueenMove(color, inMove, outSideEffect);
+            ret = _attemptQueenMove(color, inMove, outSideEffect);
+            break;
         }
         case attributes::ChessPieceName::kKing:
         {
-            return _attemptKingMove(color, inMove, outSideEffect);
+            ret = _attemptKingMove(color, inMove, outSideEffect);
+            break;
         }
     }
     
-    return false;
+    if (ret)
+    {
+        _currTurn = ((color == attributes::ChessColor::kWhite) ?
+                     attributes::ChessColor::kBlack :
+                     attributes::ChessColor::kWhite);
+    }
+    
+    return ret;
 }
 
 bool
@@ -112,58 +126,52 @@ ChessEngine::_attemptPawnMove(attributes::ChessColor inColor,
                               const Move & inMove, Move * outSideEffect,
                               bool * outPromotion)
 {
-    _simpleMoveAndKill(attributes::ChessPieceName::kPawn, inColor, inMove, outSideEffect);
     *outPromotion = false;
-    
-    return true;
+    return _simpleMoveAndKill(attributes::ChessPieceName::kPawn, inColor,
+                              inMove, outSideEffect);
 }
 
 bool
 ChessEngine::_attemptKnightMove(attributes::ChessColor inColor,
                                 const Move & inMove, Move * outSideEffect)
 {
-    _simpleMoveAndKill(attributes::ChessPieceName::kKnight, inColor, inMove, outSideEffect);
-    
-    return true;
+    return _simpleMoveAndKill(attributes::ChessPieceName::kKnight, inColor,
+                              inMove, outSideEffect);
 }
 
 bool
 ChessEngine::_attemptBishopMove(attributes::ChessColor inColor,
                                 const Move & inMove, Move * outSideEffect)
 {
-    _simpleMoveAndKill(attributes::ChessPieceName::kBishop, inColor, inMove, outSideEffect);
-    
-    return true;
+    return _simpleMoveAndKill(attributes::ChessPieceName::kBishop, inColor,
+                              inMove, outSideEffect);
 }
 
 bool
 ChessEngine::_attemptRookMove(attributes::ChessColor inColor,
                               const Move & inMove, Move * outSideEffect)
 {
-    _simpleMoveAndKill(attributes::ChessPieceName::kRook, inColor, inMove, outSideEffect);
-    
-    return true;
+    return _simpleMoveAndKill(attributes::ChessPieceName::kRook, inColor,
+                              inMove, outSideEffect);
 }
 
 bool
 ChessEngine::_attemptQueenMove(attributes::ChessColor inColor,
                                const Move & inMove, Move * outSideEffect)
 {
-    _simpleMoveAndKill(attributes::ChessPieceName::kQueen, inColor, inMove, outSideEffect);
-    
-    return true;
+    return _simpleMoveAndKill(attributes::ChessPieceName::kQueen, inColor,
+                              inMove, outSideEffect);
 }
 
 bool
 ChessEngine::_attemptKingMove(attributes::ChessColor inColor,
                               const Move & inMove, Move * outSideEffect)
 {
-    _simpleMoveAndKill(attributes::ChessPieceName::kKing, inColor, inMove, outSideEffect);
-    
-    return true;
+    return _simpleMoveAndKill(attributes::ChessPieceName::kKing, inColor,
+                              inMove, outSideEffect);
 }
 
-void
+bool
 ChessEngine::_simpleMoveAndKill(attributes::ChessPieceName inPiece,
                                 attributes::ChessColor inColor,
                                 const Move & inMove, Move * outSideEffect)
@@ -180,10 +188,15 @@ ChessEngine::_simpleMoveAndKill(attributes::ChessPieceName inPiece,
     
     if (others.getPieceAt(inMove.dest, &capturedPiece))
     {
+        if (capturedPiece == attributes::ChessPieceName::kKing)
+        {
+            return false;
+        }
+        
         own.board(capturedPiece) &= ~dest;
         
         outSideEffect->src  = (*dest.begin()).getPosition();
-        outSideEffect->dest = Position();
+        outSideEffect->dest = Position::outside();
     }
     
     own.board(inPiece)  &= ~src;

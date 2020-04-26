@@ -29,6 +29,8 @@ namespace chessEngine
         uint8_t                     row;
         uint8_t                     col;
         
+        static Position             outside() { return Position(); }
+        
         Position() :
         row(kRemoved), col(kRemoved)
         { }
@@ -76,6 +78,9 @@ namespace chessEngine
         Position                    src;
         Position                    dest;
         
+        static Move                 invalid()
+        { return Move(); }
+        
         Move() :
         src(), dest()
         { }
@@ -83,6 +88,9 @@ namespace chessEngine
         Move(Position inSrc, Position inDest) :
         src(inSrc), dest(inDest)
         { }
+        
+        bool                        isValid()
+        { return src.isOutside() && dest.isOutside(); }
     };
     
     /**
@@ -137,6 +145,8 @@ namespace chessEngine
         BitboardCollection          _whitePieces;
         BitboardCollection          _blackPieces;
         
+        attributes::ChessColor      _currTurn;
+        
     public:
         ChessEngine();
         
@@ -149,6 +159,8 @@ namespace chessEngine
          */
         bool                        attemptMove(const Move & inMove, Move * outSideEffect,
                                                 bool * outPromotion);
+        
+        attributes::ChessColor      getCurrMove() const { return _currTurn; }
         
     private:
         bool                        _attemptPawnMove(attributes::ChessColor inColor,
@@ -165,7 +177,7 @@ namespace chessEngine
         bool                        _attemptKingMove(attributes::ChessColor inColor,
                                                      const Move & inMove, Move * outSideEffect);
         
-        void                        _simpleMoveAndKill(attributes::ChessPieceName inPiece,
+        bool                        _simpleMoveAndKill(attributes::ChessPieceName inPiece,
                                                        attributes::ChessColor inColor,
                                                        const Move & inMove, Move * outSideEffect);
     };
