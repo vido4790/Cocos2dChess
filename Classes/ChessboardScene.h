@@ -13,8 +13,6 @@
 #include <array>
 #include <unordered_map>
 
-#include "cocos2d.h"
-
 #include "Chess.h"
 #include "ChessAppStateMachine.h"
 

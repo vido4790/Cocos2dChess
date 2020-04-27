@@ -26,6 +26,7 @@
 cmake_minimum_required(VERSION 3.6)
 
 set(APP_NAME Chess)
+set(TEST_APP_NAME ChessTests)
 
 project(${APP_NAME})
 
@@ -47,6 +48,14 @@ endif()
 set(GAME_SOURCE)
 set(GAME_HEADER)
 
+# for testable files
+set(TESTABLE_SOURCE)
+set(TESTABLE_HEADER)
+
+# for test files
+set(TEST_SOURCE)
+set(TEST_HEADER)
+
 set(GAME_RES_FOLDER
     "${CMAKE_CURRENT_SOURCE_DIR}/Resources"
     )
@@ -54,25 +63,46 @@ if(APPLE OR WINDOWS)
     cocos_mark_multi_resources(common_res_files RES_TO "Resources" FOLDERS ${GAME_RES_FOLDER})
 endif()
 
-# add cross-platforms source files and header files 
-list(APPEND GAME_SOURCE
-     Classes/AppDelegate.cpp
-     Classes/WelcomeScene.cpp
-     Classes/ChessboardScene.cpp
-     Classes/ChessAppStateMachine.cpp
+list(APPEND TESTABLE_SOURCE
      Classes/AppStateMachine.cpp
      Classes/ChessEngine.cpp
      Classes/Bitboard.cpp
      )
-list(APPEND GAME_HEADER
-     Classes/AppDelegate.h
-     Classes/WelcomeScene.h
-     Classes/ChessboardScene.h
-     Classes/ChessAppStateMachine.h
+
+list(APPEND TESTABLE_HEADER
      Classes/AppStateMachine.h
      Classes/Chess.h
      Classes/ChessEngine.h
      Classes/Bitboard.h
+     )
+
+# add cross-platforms source files and header files
+list(APPEND GAME_SOURCE
+     ${TESTABLE_SOURCE}
+     Classes/ChessAppStateMachine.cpp
+     Classes/WelcomeScene.cpp
+     Classes/ChessboardScene.cpp
+     Classes/AppDelegate.cpp
+     )
+
+list(APPEND GAME_HEADER
+     ${TESTABLE_HEADER}
+     Classes/ChessAppStateMachine.h
+     Classes/WelcomeScene.h
+     Classes/ChessboardScene.h
+     Classes/AppDelegate.h
+     )
+
+list(APPEND TEST_SOURCE
+     ${TESTABLE_SOURCE}
+     test/ChessTestsMain.cpp
+     test/BitboardTests.cpp
+     )
+
+list(APPEND TEST_HEADER
+     ${TESTABLE_HEADER}
+     test/Catch.hpp
+     test/Test.h
      )
 
 if(ANDROID)
@@ -132,8 +162,26 @@ set(all_code_files
     ${GAME_HEADER}
     ${GAME_SOURCE}
     )
+
+set(all_test_code_files
+    ${TEST_HEADER}
+    ${TEST_SOURCE}
+    )
+
 if(NOT ANDROID)
     add_executable(${APP_NAME} ${all_code_files})
+
+    if(NOT IOS)
+        set(TEST_OUT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+        add_executable(${TEST_APP_NAME} ${all_test_code_files})
+        set_target_properties(${TEST_APP_NAME} PROPERTIES
+                              RUNTIME_OUTPUT_DIRECTORY ${TEST_OUT_DIR}
+                              )
+        add_custom_command(TARGET ${TEST_APP_NAME} POST_BUILD
+                           COMMAND ${CMAKE_COMMAND} -E copy
+                            ${TEST_OUT_DIR}/Debug/${TEST_APP_NAME} ${TEST_OUT_DIR}/${TEST_APP_NAME})
+    endif()
+
 else()
     add_library(${APP_NAME} SHARED ${all_code_files})
     add_subdirectory(${COCOS2DX_ROOT_PATH}/cocos/platform/android ${ENGINE_BINARY_PATH}/cocos/platform)
@@ -145,6 +193,17 @@ target_include_directories(${APP_NAME}
         PRIVATE Classes
         PRIVATE ${COCOS2DX_ROOT_PATH}/cocos/audio/include/
 )
+
+set(test_header_dirs)
+
+list(APPEND test_header_dirs)
+
+target_include_directories(${TEST_APP_NAME}
+        PRIVATE Classes
+        PRIVATE test
+        PRIVATE ${test_header_dirs}
+)
+target_compile_definitions(${TEST_APP_NAME} PUBLIC TARGET_TEST)
 
 # mark app resources
 setup_cocos_app_config(${APP_NAME})

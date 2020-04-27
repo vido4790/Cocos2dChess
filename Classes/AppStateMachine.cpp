@@ -11,7 +11,6 @@
 #include <assert.h>
 
 #include "AppStateMachine.h"
-#include "AppDelegate.h"
 
 using namespace render;
 

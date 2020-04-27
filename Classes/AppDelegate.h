@@ -12,8 +12,6 @@
 
 #include "Chess.h"
 
-#include "cocos2d.h"
-
 namespace render
 {
     class AppStateMachine;

@@ -15,10 +15,11 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#ifndef APP_UTILS
-#define LOG      cocos2d::log
+#ifndef TARGET_TEST
+    #include "cocos2d.h"
+    #define LOG      cocos2d::log
 #else
-#define LOG      printf
+    #define LOG      printf
 #endif
 
 namespace attributes

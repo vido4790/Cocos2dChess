@@ -11,13 +11,10 @@
 #include "ChessEngine.h"
 #include "Bitboard.h"
 
-#include "cocos2d.h"
-
 #include <inttypes.h>
 #include <limits>
 
 using namespace chessEngine;
-using namespace cocos2d;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -

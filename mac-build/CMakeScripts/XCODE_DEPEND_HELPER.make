@@ -59,6 +59,11 @@ PostBuild.ext_unzip.Debug: /Users/viragdoshi/dev/git/personal/Chess/mac-build/bi
 	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/bin/Chess/Debug/Chess.app/Contents/MacOS/Chess
 
 
+PostBuild.ChessTests.Debug:
+/Users/viragdoshi/dev/git/personal/Chess/bin/Debug/ChessTests:
+	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/bin/Debug/ChessTests
+
+
 PostBuild.cocos2d.Debug:
 /Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/Debug/libcocos2d.a:
 	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/Debug/libcocos2d.a
@@ -169,6 +174,11 @@ PostBuild.ext_unzip.Release: /Users/viragdoshi/dev/git/personal/Chess/mac-build/
 	/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/glsl-optimizer/prebuilt/mac/libmesa.a\
 	/usr/lib/libiconv.dylib
 	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/bin/Chess/Release/Chess.app/Contents/MacOS/Chess
+
+
+PostBuild.ChessTests.Release:
+/Users/viragdoshi/dev/git/personal/Chess/bin/Release/ChessTests:
+	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/bin/Release/ChessTests
 
 
 PostBuild.cocos2d.Release:
@@ -283,6 +293,11 @@ PostBuild.ext_unzip.MinSizeRel: /Users/viragdoshi/dev/git/personal/Chess/mac-bui
 	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/bin/Chess/MinSizeRel/Chess.app/Contents/MacOS/Chess
 
 
+PostBuild.ChessTests.MinSizeRel:
+/Users/viragdoshi/dev/git/personal/Chess/bin/MinSizeRel/ChessTests:
+	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/bin/MinSizeRel/ChessTests
+
+
 PostBuild.cocos2d.MinSizeRel:
 /Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/MinSizeRel/libcocos2d.a:
 	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/lib/MinSizeRel/libcocos2d.a
@@ -393,6 +408,11 @@ PostBuild.ext_unzip.RelWithDebInfo: /Users/viragdoshi/dev/git/personal/Chess/mac
 	/Users/viragdoshi/dev/git/personal/Chess/cocos2d/external/glsl-optimizer/prebuilt/mac/libmesa.a\
 	/usr/lib/libiconv.dylib
 	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/mac-build/bin/Chess/RelWithDebInfo/Chess.app/Contents/MacOS/Chess
+
+
+PostBuild.ChessTests.RelWithDebInfo:
+/Users/viragdoshi/dev/git/personal/Chess/bin/RelWithDebInfo/ChessTests:
+	/bin/rm -f /Users/viragdoshi/dev/git/personal/Chess/bin/RelWithDebInfo/ChessTests
 
 
 PostBuild.cocos2d.RelWithDebInfo:
