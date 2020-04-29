@@ -19,6 +19,8 @@ using namespace chessEngine;
 
 TEST_CASE( "Test Bitboards", "[Bitboard]")
 {
+    BitboardLUT::init();
+    
 	BitboardMask wholeMask = 0;
 
 	for (auto i = 0; i < 64; i++)
@@ -32,7 +34,7 @@ TEST_CASE( "Test Bitboards", "[Bitboard]")
 		wholeMask |= Bitboard::getForSquare(i).mask;
 	}
 
-	CHECK(wholeMask == Bitboard::kFull.mask);
+	CHECK(wholeMask == BitboardLUT::kFull.mask);
 	wholeMask = 0;
 
 	for (auto i = 0; i < 8; i++)
@@ -47,7 +49,7 @@ TEST_CASE( "Test Bitboards", "[Bitboard]")
 		wholeMask |= Bitboard::getForRow(i).mask;
 	}
 
-	CHECK(wholeMask == Bitboard::kFull.mask);
+	CHECK(wholeMask == BitboardLUT::kFull.mask);
 	wholeMask = 0;
 
 	for (auto i = 0; i < 8; i++)
@@ -62,7 +64,7 @@ TEST_CASE( "Test Bitboards", "[Bitboard]")
 		wholeMask |= Bitboard::getForCol(i).mask;
 	}
 
-	CHECK(wholeMask == Bitboard::kFull.mask);
+	CHECK(wholeMask == BitboardLUT::kFull.mask);
 	wholeMask = 0;
 
 	BitboardMask aWholeMask = 0;
@@ -104,7 +106,7 @@ TEST_CASE( "Test Bitboards", "[Bitboard]")
 		aWholeMask |= Bitboard::getForADiag(i).mask;
 	}
 
-	CHECK(wholeMask == Bitboard::kFull.mask);
-	CHECK(aWholeMask == Bitboard::kFull.mask);
+	CHECK(wholeMask == BitboardLUT::kFull.mask);
+	CHECK(aWholeMask == BitboardLUT::kFull.mask);
 	wholeMask = 0;
 }

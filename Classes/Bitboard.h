@@ -67,36 +67,40 @@ namespace chessEngine
     
     using BitboardMask = uint64_t;
     
+    namespace BitboardLUT
+    {
+        extern const Bitboard       kRowMasks[8];
+        extern const Bitboard       kColMasks[8];
+        extern const Bitboard       kDiagMasks[15];
+        extern const Bitboard       kADiagMasks[15];
+        extern const Bitboard       kSquareMasks[64];
+        
+        extern const Bitboard       kStartWhitePawns;
+        extern const Bitboard       kStartBlackPawns;
+        
+        extern const Bitboard       kStartWhiteKnights;
+        extern const Bitboard       kStartBlackKnights;
+        
+        extern const Bitboard       kStartWhiteBishops;
+        extern const Bitboard       kStartBlackBishops;
+        
+        extern const Bitboard       kStartWhiteRooks;
+        extern const Bitboard       kStartBlackRooks;
+        
+        extern const Bitboard       kStartWhiteQueen;
+        extern const Bitboard       kStartBlackQueen;
+        
+        extern const Bitboard       kStartWhiteKing;
+        extern const Bitboard       kStartBlackKing;
+        
+        extern const Bitboard       kFull;
+        
+        void                        init();
+    }
+    
     struct Bitboard
     {
-    private:
-        static const Bitboard       kRowMasks[8];
-        static const Bitboard       kColMasks[8];
-        static const Bitboard       kDiagMasks[15];
-        static const Bitboard       kADiagMasks[15];
-        static const Bitboard       kSquareMasks[64];
-        
     public:
-        static const Bitboard       kStartWhitePawns;
-        static const Bitboard       kStartBlackPawns;
-        
-        static const Bitboard       kStartWhiteKnights;
-        static const Bitboard       kStartBlackKnights;
-        
-        static const Bitboard       kStartWhiteBishops;
-        static const Bitboard       kStartBlackBishops;
-        
-        static const Bitboard       kStartWhiteRooks;
-        static const Bitboard       kStartBlackRooks;
-        
-        static const Bitboard       kStartWhiteQueen;
-        static const Bitboard       kStartBlackQueen;
-        
-        static const Bitboard       kStartWhiteKing;
-        static const Bitboard       kStartBlackKing;
-        
-        static const Bitboard       kFull;
-        
         BitboardMask                mask;
         
         struct Iterator
@@ -160,16 +164,16 @@ namespace chessEngine
         void                            print() const;
         
         static Bitboard                 getForSquare(Square inSq)
-        { return kSquareMasks[inSq.index]; }
+        { return BitboardLUT::kSquareMasks[inSq.index]; }
         
         static Bitboard                 getForRow(uint8_t inRowNum)
-        { return kRowMasks[inRowNum]; }
+        { return BitboardLUT::kRowMasks[inRowNum]; }
         
         static Bitboard                 getForRowWith(Square inSq)
         { return getForRow(inSq._getRowNoValidation()); }
         
         static Bitboard                 getForCol(uint8_t inColNum)
-        { return kColMasks[inColNum]; }
+        { return BitboardLUT::kColMasks[inColNum]; }
         
         static Bitboard                 getForColWith(Square inSq)
         { return getForCol(inSq._getColNoValidation()); }
@@ -181,16 +185,19 @@ namespace chessEngine
         { return inSq._getRowNoValidation() + inSq._getColNoValidation(); }
         
         static Bitboard                 getForDiag(uint8_t inDiagNum)
-        { return kDiagMasks[inDiagNum]; }
+        { return BitboardLUT::kDiagMasks[inDiagNum]; }
         
         static Bitboard                 getForADiag(uint8_t inADiagNum)
-        { return kADiagMasks[inADiagNum]; }
+        { return BitboardLUT::kADiagMasks[inADiagNum]; }
         
         static Bitboard                 getForDiagWith(Square inSq)
         { return getForDiag(getDiagNum(inSq)); }
         
         static Bitboard                 getForADiagWith(Square inSq)
         { return getForADiag(getADiagNum(inSq)); }
+        
+        static Bitboard                 getRowAttacks(Square inSq, Bitboard inBoard);
+        static Bitboard                 getRowAttacks(Bitboard inAttackers, Bitboard inBoard);
     };
     
     static inline Bitboard              operator& (Bitboard inB1, Bitboard inB2)

@@ -147,6 +147,8 @@ namespace chessEngine
         
         attributes::ChessColor      _currTurn;
         
+        static bool                 _sIsInit;
+        
     public:
         ChessEngine();
         
@@ -161,6 +163,8 @@ namespace chessEngine
                                                 bool * outPromotion);
         
         attributes::ChessColor      getCurrMove() const { return _currTurn; }
+        
+        static void                 init();
         
     private:
         bool                        _attemptPawnMove(attributes::ChessColor inColor,

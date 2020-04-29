@@ -40,16 +40,28 @@ ChessEngine::BitboardCollection::getPieceAt(const Position & inPos,
 #pragma mark ChessboardScene
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+bool ChessEngine::_sIsInit = false;
+
 ChessEngine::ChessEngine() :
-_whitePieces(Bitboard::kStartWhitePawns, Bitboard::kStartWhiteKnights,
-             Bitboard::kStartWhiteBishops, Bitboard::kStartWhiteRooks,
-             Bitboard::kStartWhiteQueen, Bitboard::kStartWhiteKing),
-_blackPieces(Bitboard::kStartBlackPawns, Bitboard::kStartBlackKnights,
-             Bitboard::kStartBlackBishops, Bitboard::kStartBlackRooks,
-             Bitboard::kStartBlackQueen, Bitboard::kStartBlackKing),
+_whitePieces(BitboardLUT::kStartWhitePawns, BitboardLUT::kStartWhiteKnights,
+             BitboardLUT::kStartWhiteBishops, BitboardLUT::kStartWhiteRooks,
+             BitboardLUT::kStartWhiteQueen, BitboardLUT::kStartWhiteKing),
+_blackPieces(BitboardLUT::kStartBlackPawns, BitboardLUT::kStartBlackKnights,
+             BitboardLUT::kStartBlackBishops, BitboardLUT::kStartBlackRooks,
+             BitboardLUT::kStartBlackQueen, BitboardLUT::kStartBlackKing),
 _currTurn(attributes::ChessColor::kWhite)
 {
     
+}
+
+void
+ChessEngine::init()
+{
+    if (!_sIsInit)
+    {
+        BitboardLUT::init();
+        _sIsInit = true;
+    }
 }
 
 bool
@@ -201,4 +213,6 @@ ChessEngine::_simpleMoveAndKill(attributes::ChessPieceName inPiece,
     
     own.board(inPiece)  &= ~src;
     own.board(inPiece)  |= dest;
+    
+    return true;
 }

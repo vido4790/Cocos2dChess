@@ -31,17 +31,17 @@ Square::getPosition() const
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
-#pragma mark Bitboard
+#pragma mark BitboardLUT
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 static constexpr BitboardMask kRowMaskBase = 0xFFULL;
-const Bitboard   Bitboard::kRowMasks[8] = {
+const Bitboard   BitboardLUT::kRowMasks[8] = {
     (kRowMaskBase <<  0), (kRowMaskBase <<  8), (kRowMaskBase << 16), (kRowMaskBase << 24),
     (kRowMaskBase << 32), (kRowMaskBase << 40), (kRowMaskBase << 48), (kRowMaskBase << 56)
 };
 
 static constexpr BitboardMask kColMasksBase = 0x0101010101010101ULL;
-const Bitboard   Bitboard::kColMasks[8] = {
+const Bitboard   BitboardLUT::kColMasks[8] = {
     (kColMasksBase << 7), (kColMasksBase << 6),
     (kColMasksBase << 5), (kColMasksBase << 4),
     (kColMasksBase << 3), (kColMasksBase << 2),
@@ -49,7 +49,7 @@ const Bitboard   Bitboard::kColMasks[8] = {
 };
 
 static constexpr BitboardMask kSquareMaskBase = 0x01ULL;
-const Bitboard   Bitboard::kSquareMasks[64] = {
+const Bitboard   BitboardLUT::kSquareMasks[64] = {
     (kSquareMaskBase << 0x00), (kSquareMaskBase << 0x01),
     (kSquareMaskBase << 0x02), (kSquareMaskBase << 0x03),
     (kSquareMaskBase << 0x04), (kSquareMaskBase << 0x05),
@@ -90,7 +90,7 @@ const Bitboard   Bitboard::kSquareMasks[64] = {
 // index such that a point (r, c) is on the diagonal i = r - c + 7
 //
 static constexpr BitboardMask kDiagMaskBase = 0x8040201008040201ULL;
-const Bitboard    Bitboard::kDiagMasks[15] = {  // start (r, c) on the board
+const Bitboard    BitboardLUT::kDiagMasks[15] = {  // start (r, c) on the board
     (kDiagMaskBase >> 56),                      //  0 or (0, 7)
     (kDiagMaskBase >> 48),                      //  1 or (0, 6)
     (kDiagMaskBase >> 40),                      //  2 or (0, 5)
@@ -114,7 +114,7 @@ const Bitboard    Bitboard::kDiagMasks[15] = {  // start (r, c) on the board
 // index such that a point (r, c) is on the diagonal i = r + c
 //
 static constexpr BitboardMask kADiagMaskBase = 0x0102040810204080ULL;
-const Bitboard    Bitboard::kADiagMasks[15] = { //  i     r  c
+const Bitboard    BitboardLUT::kADiagMasks[15] = { //  i     r  c
     (kADiagMaskBase >> 56),                     //  0 or (0, 0)
     (kADiagMaskBase >> 48),                     //  1 or (0, 1)
     (kADiagMaskBase >> 40),                     //  2 or (0, 2)
@@ -132,32 +132,56 @@ const Bitboard    Bitboard::kADiagMasks[15] = { //  i     r  c
     (kADiagMaskBase << 56)                      // 14 or (7, 7)
 };
 
-const Bitboard    Bitboard::kStartWhitePawns    = Bitboard::kRowMasks[1];
-const Bitboard    Bitboard::kStartBlackPawns    = Bitboard::kRowMasks[6];
+const Bitboard    BitboardLUT::kStartWhitePawns    = BitboardLUT::kRowMasks[1];
+const Bitboard    BitboardLUT::kStartBlackPawns    = BitboardLUT::kRowMasks[6];
 
-const Bitboard    Bitboard::kStartWhiteKnights  = (Bitboard::kSquareMasks[1] |
-                                                   Bitboard::kSquareMasks[6]);
-const Bitboard    Bitboard::kStartBlackKnights  = (Bitboard::kSquareMasks[56 + 1] |
-                                                   Bitboard::kSquareMasks[56 + 6]);
+const Bitboard    BitboardLUT::kStartWhiteKnights  = (BitboardLUT::kSquareMasks[1] |
+                                                   BitboardLUT::kSquareMasks[6]);
+const Bitboard    BitboardLUT::kStartBlackKnights  = (BitboardLUT::kSquareMasks[56 + 1] |
+                                                   BitboardLUT::kSquareMasks[56 + 6]);
 
-const Bitboard    Bitboard::kStartWhiteBishops  = (Bitboard::kSquareMasks[2] |
-                                                   Bitboard::kSquareMasks[5]);
-const Bitboard    Bitboard::kStartBlackBishops  = (Bitboard::kSquareMasks[56 + 2] |
-                                                   Bitboard::kSquareMasks[56 + 5]);
+const Bitboard    BitboardLUT::kStartWhiteBishops  = (BitboardLUT::kSquareMasks[2] |
+                                                   BitboardLUT::kSquareMasks[5]);
+const Bitboard    BitboardLUT::kStartBlackBishops  = (BitboardLUT::kSquareMasks[56 + 2] |
+                                                   BitboardLUT::kSquareMasks[56 + 5]);
 
-const Bitboard    Bitboard::kStartWhiteRooks    = (Bitboard::kSquareMasks[0] |
-                                                   Bitboard::kSquareMasks[7]);
-const Bitboard    Bitboard::kStartBlackRooks    = (Bitboard::kSquareMasks[56 + 0] |
-                                                   Bitboard::kSquareMasks[56 + 7]);
+const Bitboard    BitboardLUT::kStartWhiteRooks    = (BitboardLUT::kSquareMasks[0] |
+                                                   BitboardLUT::kSquareMasks[7]);
+const Bitboard    BitboardLUT::kStartBlackRooks    = (BitboardLUT::kSquareMasks[56 + 0] |
+                                                   BitboardLUT::kSquareMasks[56 + 7]);
 
-const Bitboard    Bitboard::kStartWhiteQueen    = Bitboard::kSquareMasks[3];
-const Bitboard    Bitboard::kStartBlackQueen    = Bitboard::kSquareMasks[56 + 3];
+const Bitboard    BitboardLUT::kStartWhiteQueen    = BitboardLUT::kSquareMasks[3];
+const Bitboard    BitboardLUT::kStartBlackQueen    = BitboardLUT::kSquareMasks[56 + 3];
 
-const Bitboard    Bitboard::kStartWhiteKing     = Bitboard::kSquareMasks[4];
-const Bitboard    Bitboard::kStartBlackKing     = Bitboard::kSquareMasks[56 + 4];
+const Bitboard    BitboardLUT::kStartWhiteKing     = BitboardLUT::kSquareMasks[4];
+const Bitboard    BitboardLUT::kStartBlackKing     = BitboardLUT::kSquareMasks[56 + 4];
 
-const Bitboard    Bitboard::kFull               = std::numeric_limits<BitboardMask>::max();
+const Bitboard    BitboardLUT::kFull               = std::numeric_limits<BitboardMask>::max();
 
+
+void
+BitboardLUT::init()
+{
+    
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Bitboard
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Bitboard
+Bitboard::getRowAttacks(Square inSq, Bitboard inBoard)
+{
+    
+}
+
+Bitboard
+Bitboard::getRowAttacks(Bitboard inAttackers, Bitboard inBoard)
+{
+    
+}
 
 void
 Bitboard::print() const

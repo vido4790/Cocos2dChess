@@ -514,6 +514,8 @@ ChessboardScene::init()
         return false;
     }
     
+    ChessEngine::init();
+    
     engine     = new ChessEngine();
     background = new ChessObjectWithColor(ChessTile::kBackgroundColor,
                                            this->getBoundingBox());
