@@ -90,7 +90,7 @@ const Bitboard   BitboardLUT::kSquareMasks[64] = {
 // index such that a point (r, c) is on the diagonal i = r - c + 7
 //
 static constexpr BitboardMask kDiagMaskBase = 0x8040201008040201ULL;
-const Bitboard    BitboardLUT::kDiagMasks[15] = {  // start (r, c) on the board
+const Bitboard   BitboardLUT::kDiagMasks[15] = {  // start (r, c) on the board
     (kDiagMaskBase >> 56),                      //  0 or (0, 7)
     (kDiagMaskBase >> 48),                      //  1 or (0, 6)
     (kDiagMaskBase >> 40),                      //  2 or (0, 5)
@@ -114,7 +114,7 @@ const Bitboard    BitboardLUT::kDiagMasks[15] = {  // start (r, c) on the board
 // index such that a point (r, c) is on the diagonal i = r + c
 //
 static constexpr BitboardMask kADiagMaskBase = 0x0102040810204080ULL;
-const Bitboard    BitboardLUT::kADiagMasks[15] = { //  i     r  c
+const Bitboard   BitboardLUT::kADiagMasks[15] = { //  i     r  c
     (kADiagMaskBase >> 56),                     //  0 or (0, 0)
     (kADiagMaskBase >> 48),                     //  1 or (0, 1)
     (kADiagMaskBase >> 40),                     //  2 or (0, 2)
@@ -158,11 +158,80 @@ const Bitboard    BitboardLUT::kStartBlackKing     = BitboardLUT::kSquareMasks[5
 
 const Bitboard    BitboardLUT::kFull               = std::numeric_limits<BitboardMask>::max();
 
+Bitboard          BitboardLUT::kRowOccupiedMasks[8][256];
+Bitboard          BitboardLUT::kColOccupiedMasks[8][256];
+Bitboard          BitboardLUT::kDiagOccupiedMasks[8][256];
+Bitboard          BitboardLUT::kADiagOccupiedMasks[8][256];
 
 void
 BitboardLUT::init()
 {
-    
+    for (auto i = 0; i < 8; i++)
+    {
+        for (auto others = 0; others < 256; others++)
+        {
+            uint8_t allPieces    = others | (1 << i);
+            int8_t  closestBelow = -1;
+            uint8_t closestAbove = 8;
+            
+            for (int8_t bitPos = i - 1; bitPos >= 0; bitPos--)
+            {
+                if ((1 << bitPos) & allPieces)
+                {
+                    closestBelow = bitPos;
+                    break;
+                }
+            }
+            
+            for (uint8_t bitPos = i + 1; bitPos < 8; bitPos++)
+            {
+                if ((1 << bitPos) & allPieces)
+                {
+                    closestAbove = bitPos;
+                    break;
+                }
+            }
+            
+            assert(closestBelow < i);
+            assert(closestAbove > i);
+            
+            auto rowIt   = kRowMasks[0].begin();
+            auto colIt   = kColMasks[0].begin();
+            auto diagIt  = kDiagMasks[7].begin();
+            auto aDiagIt = kADiagMasks[7].begin();
+            
+            for (auto bitPos = 0; bitPos <= closestBelow; bitPos++)
+            {
+                ++rowIt;
+                ++colIt;
+                ++diagIt;
+                ++aDiagIt;
+            }
+            
+            for (auto bitPos = closestBelow + 1; bitPos < closestAbove; bitPos++)
+            {
+                kRowOccupiedMasks[i][others]   |= Bitboard::getForSquare(*rowIt);
+                kColOccupiedMasks[i][others]   |= Bitboard::getForSquare(*colIt);
+                kDiagOccupiedMasks[i][others]  |= Bitboard::getForSquare(*diagIt);
+                kADiagOccupiedMasks[i][others] |= Bitboard::getForSquare(*aDiagIt);
+                
+                ++rowIt;
+                ++colIt;
+                ++diagIt;
+                ++aDiagIt;
+            }
+            
+            assert((kRowOccupiedMasks[i][others] | kRowMasks[0])     == kRowMasks[0]);
+            assert((kColOccupiedMasks[i][others] | kColMasks[0])     == kColMasks[0]);
+            assert((kDiagOccupiedMasks[i][others] | kDiagMasks[7])   == kDiagMasks[7]);
+            assert((kADiagOccupiedMasks[i][others] | kADiagMasks[7]) == kADiagMasks[7]);
+            
+            assert(kRowOccupiedMasks[i][others].mask   <= kRowMasks[0].mask);
+            assert(kColOccupiedMasks[i][others].mask   <= kColMasks[0].mask);
+            assert(kDiagOccupiedMasks[i][others].mask  <= kDiagMasks[7].mask);
+            assert(kADiagOccupiedMasks[i][others].mask <= kADiagMasks[7].mask);
+        }
+    }
 }
 
 

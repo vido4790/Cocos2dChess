@@ -95,6 +95,11 @@ namespace chessEngine
         
         extern const Bitboard       kFull;
         
+        extern Bitboard             kRowOccupiedMasks[8][256];
+        extern Bitboard             kColOccupiedMasks[8][256];
+        extern Bitboard             kDiagOccupiedMasks[8][256];
+        extern Bitboard             kADiagOccupiedMasks[8][256];
+        
         void                        init();
     }
     
